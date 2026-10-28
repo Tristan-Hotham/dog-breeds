@@ -1,0 +1,2171 @@
+{
+"ZWE":{
+"name":"Zimbabwe",
+"lon":29.925,
+"lat":-18.912,
+"continent":"Africa",
+"pop":14645468,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"ZMB":{
+"name":"Zambia",
+"lon":26.395,
+"lat":-14.661,
+"continent":"Africa",
+"pop":17861030,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"YEM":{
+"name":"Yemen",
+"lon":45.874,
+"lat":15.328,
+"continent":"Asia",
+"pop":29161922,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"VNM":{
+"name":"Vietnam",
+"lon":105.387,
+"lat":21.715,
+"continent":"Asia",
+"pop":96462106,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"VEN":{
+"name":"Venezuela",
+"lon":-64.599,
+"lat":7.182,
+"continent":"South America",
+"pop":28515829,
+"region":"Americas",
+"subregion":"South America"
+},
+"VAT":{
+"name":"Vatican City",
+"lon":12.453,
+"lat":41.903,
+"continent":"Europe",
+"pop":825,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"VUT":{
+"name":"Vanuatu",
+"lon":166.909,
+"lat":-15.372,
+"continent":"Oceania",
+"pop":299882,
+"region":"Oceania",
+"subregion":"Melanesia"
+},
+"UZB":{
+"name":"Uzbekistan",
+"lon":64.005,
+"lat":41.694,
+"continent":"Asia",
+"pop":33580650,
+"region":"Asia",
+"subregion":"Central Asia"
+},
+"URY":{
+"name":"Uruguay",
+"lon":-55.967,
+"lat":-32.961,
+"continent":"South America",
+"pop":3461734,
+"region":"Americas",
+"subregion":"South America"
+},
+"FSM":{
+"name":"Federated States of Micronesia",
+"lon":158.234,
+"lat":6.888,
+"continent":"Oceania",
+"pop":113815,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"MHL":{
+"name":"Marshall Islands",
+"lon":171.194,
+"lat":7.083,
+"continent":"Oceania",
+"pop":58791,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"MNP":{
+"name":"Northern Mariana Islands",
+"lon":145.734,
+"lat":15.188,
+"continent":"Oceania",
+"pop":57216,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"VIR":{
+"name":"United States Virgin Islands",
+"lon":-64.779,
+"lat":17.747,
+"continent":"North America",
+"pop":106631,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"GUM":{
+"name":"Guam",
+"lon":144.704,
+"lat":13.354,
+"continent":"Oceania",
+"pop":167294,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"ASM":{
+"name":"American Samoa",
+"lon":-170.747,
+"lat":-14.327,
+"continent":"Oceania",
+"pop":55312,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"PRI":{
+"name":"Puerto Rico",
+"lon":-66.481,
+"lat":18.235,
+"continent":"North America",
+"pop":3193694,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"USA":{
+"name":"United States of America",
+"lon":-97.483,
+"lat":39.538,
+"continent":"North America",
+"pop":328239523,
+"region":"Americas",
+"subregion":"Northern America"
+},
+"SGS":{
+"name":"South Georgia and the South Sandwich Islands",
+"lon":-31.063,
+"lat":-55.683,
+"continent":"Seven seas (open ocean)",
+"pop":30,
+"region":"Americas",
+"subregion":"Seven seas (open ocean)"
+},
+"IOT":{
+"name":"British Indian Ocean Territory",
+"lon":71.348,
+"lat":-6.191,
+"continent":"Seven seas (open ocean)",
+"pop":3000,
+"region":"Africa",
+"subregion":"Seven seas (open ocean)"
+},
+"SHN":{
+"name":"Saint Helena",
+"lon":-5.713,
+"lat":-15.95,
+"continent":"Seven seas (open ocean)",
+"pop":4534,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"PCN":{
+"name":"Pitcairn Islands",
+"lon":-128.318,
+"lat":-24.365,
+"continent":"Oceania",
+"pop":54,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"AIA":{
+"name":"Anguilla",
+"lon":-63.026,
+"lat":18.243,
+"continent":"North America",
+"pop":14731,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"FLK":{
+"name":"Falkland Islands",
+"lon":-58.739,
+"lat":-51.609,
+"continent":"South America",
+"pop":3398,
+"region":"Americas",
+"subregion":"South America"
+},
+"CYM":{
+"name":"Cayman Islands",
+"lon":-81.241,
+"lat":19.32,
+"continent":"North America",
+"pop":64948,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"BMU":{
+"name":"Bermuda",
+"lon":-64.764,
+"lat":32.297,
+"continent":"North America",
+"pop":63918,
+"region":"Americas",
+"subregion":"Northern America"
+},
+"VGB":{
+"name":"British Virgin Islands",
+"lon":-64.637,
+"lat":18.427,
+"continent":"North America",
+"pop":30030,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"TCA":{
+"name":"Turks and Caicos Islands",
+"lon":-71.753,
+"lat":21.817,
+"continent":"North America",
+"pop":38191,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"MSR":{
+"name":"Montserrat",
+"lon":-62.188,
+"lat":16.737,
+"continent":"North America",
+"pop":4649,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"JEY":{
+"name":"Jersey",
+"lon":-2.09,
+"lat":49.221,
+"continent":"Europe",
+"pop":107800,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"GGY":{
+"name":"Guernsey",
+"lon":-2.562,
+"lat":49.464,
+"continent":"Europe",
+"pop":62792,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"IMN":{
+"name":"Isle of Man",
+"lon":-4.53,
+"lat":54.221,
+"continent":"Europe",
+"pop":84584,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"GBR":{
+"name":"United Kingdom",
+"lon":-2.116,
+"lat":54.403,
+"continent":"Europe",
+"pop":66834405,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"ARE":{
+"name":"United Arab Emirates",
+"lon":54.547,
+"lat":23.466,
+"continent":"Asia",
+"pop":9770529,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"UKR":{
+"name":"Ukraine",
+"lon":32.141,
+"lat":49.725,
+"continent":"Europe",
+"pop":44385155,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"UGA":{
+"name":"Uganda",
+"lon":32.949,
+"lat":1.973,
+"continent":"Africa",
+"pop":44269594,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"TKM":{
+"name":"Turkmenistan",
+"lon":58.677,
+"lat":39.855,
+"continent":"Asia",
+"pop":5942089,
+"region":"Asia",
+"subregion":"Central Asia"
+},
+"TUR":{
+"name":"Turkey",
+"lon":34.508,
+"lat":39.345,
+"continent":"Asia",
+"pop":83429615,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"TUN":{
+"name":"Tunisia",
+"lon":9.008,
+"lat":33.687,
+"continent":"Africa",
+"pop":11694719,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"TTO":{
+"name":"Trinidad and Tobago",
+"lon":-60.918,
+"lat":10.999,
+"continent":"North America",
+"pop":1394973,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"TON":{
+"name":"Tonga",
+"lon":-175.163,
+"lat":-21.21,
+"continent":"Oceania",
+"pop":104494,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"TGO":{
+"name":"Togo",
+"lon":1.058,
+"lat":8.807,
+"continent":"Africa",
+"pop":8082366,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"TLS":{
+"name":"East Timor",
+"lon":125.855,
+"lat":-8.804,
+"continent":"Asia",
+"pop":1293119,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"THA":{
+"name":"Thailand",
+"lon":101.073,
+"lat":15.46,
+"continent":"Asia",
+"pop":69625582,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"TZA":{
+"name":"Tanzania",
+"lon":34.959,
+"lat":-6.052,
+"continent":"Africa",
+"pop":58005463,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"TJK":{
+"name":"Tajikistan",
+"lon":72.587,
+"lat":38.2,
+"continent":"Asia",
+"pop":9321018,
+"region":"Asia",
+"subregion":"Central Asia"
+},
+"TWN":{
+"name":"Taiwan",
+"lon":120.868,
+"lat":23.652,
+"continent":"Asia",
+"pop":23568378,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"SYR":{
+"name":"Syria",
+"lon":38.278,
+"lat":35.007,
+"continent":"Asia",
+"pop":17070135,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"CHE":{
+"name":"Switzerland",
+"lon":7.464,
+"lat":46.719,
+"continent":"Europe",
+"pop":8574832,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"SWE":{
+"name":"Sweden",
+"lon":19.017,
+"lat":65.859,
+"continent":"Europe",
+"pop":10285453,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"SWZ":{
+"name":"Eswatini",
+"lon":31.467,
+"lat":-26.534,
+"continent":"Africa",
+"pop":1148130,
+"region":"Africa",
+"subregion":"Southern Africa"
+},
+"SUR":{
+"name":"Suriname",
+"lon":-55.911,
+"lat":4.144,
+"continent":"South America",
+"pop":581363,
+"region":"Americas",
+"subregion":"South America"
+},
+"SSD":{
+"name":"South Sudan",
+"lon":30.39,
+"lat":7.23,
+"continent":"Africa",
+"pop":11062113,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"SDN":{
+"name":"Sudan",
+"lon":29.261,
+"lat":16.331,
+"continent":"Africa",
+"pop":42813238,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"LKA":{
+"name":"Sri Lanka",
+"lon":80.705,
+"lat":7.581,
+"continent":"Asia",
+"pop":21803000,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"ESP":{
+"name":"Spain",
+"lon":-3.465,
+"lat":40.091,
+"continent":"Europe",
+"pop":47076781,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"KOR":{
+"name":"South Korea",
+"lon":128.13,
+"lat":36.385,
+"continent":"Asia",
+"pop":51709098,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"ZAF":{
+"name":"South Africa",
+"lon":23.666,
+"lat":-29.709,
+"continent":"Africa",
+"pop":58558270,
+"region":"Africa",
+"subregion":"Southern Africa"
+},
+"SOM":{
+"name":"Somalia",
+"lon":45.192,
+"lat":3.569,
+"continent":"Africa",
+"pop":10192317.3,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"SOL":{
+"name":"Somaliland",
+"lon":46.732,
+"lat":9.444,
+"continent":"Africa",
+"pop":5096159,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"SLB":{
+"name":"Solomon Islands",
+"lon":159.17,
+"lat":-8.03,
+"continent":"Oceania",
+"pop":669823,
+"region":"Oceania",
+"subregion":"Melanesia"
+},
+"SVK":{
+"name":"Slovakia",
+"lon":19.05,
+"lat":48.734,
+"continent":"Europe",
+"pop":5454073,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"SVN":{
+"name":"Slovenia",
+"lon":14.915,
+"lat":46.061,
+"continent":"Europe",
+"pop":2087946,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"SGP":{
+"name":"Singapore",
+"lon":103.817,
+"lat":1.367,
+"continent":"Asia",
+"pop":5703569,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"SLE":{
+"name":"Sierra Leone",
+"lon":-11.764,
+"lat":8.617,
+"continent":"Africa",
+"pop":7813215,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"SYC":{
+"name":"Seychelles",
+"lon":55.48,
+"lat":-4.677,
+"continent":"Seven seas (open ocean)",
+"pop":97625,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"SRB":{
+"name":"Serbia",
+"lon":20.788,
+"lat":44.19,
+"continent":"Europe",
+"pop":6944975,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"SEN":{
+"name":"Senegal",
+"lon":-14.779,
+"lat":15.138,
+"continent":"Africa",
+"pop":16296364,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"SAU":{
+"name":"Saudi Arabia",
+"lon":44.7,
+"lat":23.807,
+"continent":"Asia",
+"pop":34268528,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"STP":{
+"name":"São Tomé and Príncipe",
+"lon":7.021,
+"lat":0.971,
+"continent":"Africa",
+"pop":215056,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"SMR":{
+"name":"San Marino",
+"lon":12.441,
+"lat":43.934,
+"continent":"Europe",
+"pop":33860,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"WSM":{
+"name":"Samoa",
+"lon":-172.438,
+"lat":-13.639,
+"continent":"Oceania",
+"pop":197097,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"VCT":{
+"name":"Saint Vincent and the Grenadines",
+"lon":-61.336,
+"lat":13.088,
+"continent":"North America",
+"pop":110589,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"LCA":{
+"name":"Saint Lucia",
+"lon":-60.98,
+"lat":13.892,
+"continent":"North America",
+"pop":182790,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"KNA":{
+"name":"Saint Kitts and Nevis",
+"lon":-62.758,
+"lat":17.337,
+"continent":"North America",
+"pop":52834,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"RWA":{
+"name":"Rwanda",
+"lon":30.104,
+"lat":-1.897,
+"continent":"Africa",
+"pop":12626950,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"RUS":{
+"name":"Russia",
+"lon":44.686,
+"lat":58.249,
+"continent":"Europe",
+"pop":144373535,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"ROU":{
+"name":"Romania",
+"lon":24.973,
+"lat":45.733,
+"continent":"Europe",
+"pop":19356544,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"QAT":{
+"name":"Qatar",
+"lon":51.144,
+"lat":25.237,
+"continent":"Asia",
+"pop":2832067,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"PRT":{
+"name":"Portugal",
+"lon":-8.272,
+"lat":39.607,
+"continent":"Europe",
+"pop":10269417,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"POL":{
+"name":"Poland",
+"lon":19.49,
+"lat":51.99,
+"continent":"Europe",
+"pop":37970874,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"PHL":{
+"name":"Philippines",
+"lon":122.465,
+"lat":11.198,
+"continent":"Asia",
+"pop":108116615,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"PER":{
+"name":"Peru",
+"lon":-72.9,
+"lat":-12.977,
+"continent":"South America",
+"pop":32510453,
+"region":"Americas",
+"subregion":"South America"
+},
+"PRY":{
+"name":"Paraguay",
+"lon":-60.146,
+"lat":-21.675,
+"continent":"South America",
+"pop":7044636,
+"region":"Americas",
+"subregion":"South America"
+},
+"PNG":{
+"name":"Papua New Guinea",
+"lon":143.91,
+"lat":-5.695,
+"continent":"Oceania",
+"pop":8776109,
+"region":"Oceania",
+"subregion":"Melanesia"
+},
+"PAN":{
+"name":"Panama",
+"lon":-80.352,
+"lat":8.722,
+"continent":"North America",
+"pop":4246439,
+"region":"Americas",
+"subregion":"Central America"
+},
+"PLW":{
+"name":"Palau",
+"lon":134.58,
+"lat":7.518,
+"continent":"Oceania",
+"pop":18008,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"PAK":{
+"name":"Pakistan",
+"lon":68.546,
+"lat":29.328,
+"continent":"Asia",
+"pop":216565318,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"OMN":{
+"name":"Oman",
+"lon":57.337,
+"lat":22.12,
+"continent":"Asia",
+"pop":4974986,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"NOR":{
+"name":"Norway",
+"lon":9.68,
+"lat":61.357,
+"continent":"Europe",
+"pop":5347896,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"PRK":{
+"name":"North Korea",
+"lon":126.445,
+"lat":39.885,
+"continent":"Asia",
+"pop":25666161,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"NGA":{
+"name":"Nigeria",
+"lon":7.503,
+"lat":9.44,
+"continent":"Africa",
+"pop":200963599,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"NER":{
+"name":"Niger",
+"lon":9.504,
+"lat":17.446,
+"continent":"Africa",
+"pop":23310715,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"NIC":{
+"name":"Nicaragua",
+"lon":-85.069,
+"lat":12.671,
+"continent":"North America",
+"pop":6545502,
+"region":"Americas",
+"subregion":"Central America"
+},
+"NZL":{
+"name":"New Zealand",
+"lon":172.787,
+"lat":-39.759,
+"continent":"Oceania",
+"pop":4917000,
+"region":"Oceania",
+"subregion":"Australia and New Zealand"
+},
+"NIU":{
+"name":"Niue",
+"lon":-169.863,
+"lat":-19.046,
+"continent":"Oceania",
+"pop":1620,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"COK":{
+"name":"Cook Islands",
+"lon":-159.786,
+"lat":-21.216,
+"continent":"Oceania",
+"pop":17459,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"NLD":{
+"name":"Netherlands",
+"lon":5.611,
+"lat":52.422,
+"continent":"Europe",
+"pop":17332850,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"ABW":{
+"name":"Aruba",
+"lon":-69.973,
+"lat":12.517,
+"continent":"North America",
+"pop":106314,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"CUW":{
+"name":"Curaçao",
+"lon":-68.921,
+"lat":12.145,
+"continent":"North America",
+"pop":157538,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"NPL":{
+"name":"Nepal",
+"lon":83.64,
+"lat":28.298,
+"continent":"Asia",
+"pop":28608710,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"NRU":{
+"name":"Nauru",
+"lon":166.933,
+"lat":-0.52,
+"continent":"Oceania",
+"pop":12581,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"NAM":{
+"name":"Namibia",
+"lon":17.108,
+"lat":-20.575,
+"continent":"Africa",
+"pop":2494530,
+"region":"Africa",
+"subregion":"Southern Africa"
+},
+"MOZ":{
+"name":"Mozambique",
+"lon":37.838,
+"lat":-13.943,
+"continent":"Africa",
+"pop":30366036,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"MAR":{
+"name":"Morocco",
+"lon":-7.187,
+"lat":31.651,
+"continent":"Africa",
+"pop":36471769,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"ESH":{
+"name":"Western Sahara",
+"lon":-12.63,
+"lat":23.968,
+"continent":"Africa",
+"pop":603253,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"MNE":{
+"name":"Montenegro",
+"lon":19.144,
+"lat":42.803,
+"continent":"Europe",
+"pop":622137,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"MNG":{
+"name":"Mongolia",
+"lon":104.15,
+"lat":45.997,
+"continent":"Asia",
+"pop":3225167,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"MDA":{
+"name":"Moldova",
+"lon":28.488,
+"lat":47.435,
+"continent":"Europe",
+"pop":2657637,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"MCO":{
+"name":"Monaco",
+"lon":7.398,
+"lat":43.74,
+"continent":"Europe",
+"pop":38964,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"MEX":{
+"name":"Mexico",
+"lon":-102.289,
+"lat":23.92,
+"continent":"North America",
+"pop":127575529,
+"region":"Americas",
+"subregion":"Central America"
+},
+"MUS":{
+"name":"Mauritius",
+"lon":57.566,
+"lat":-20.3,
+"continent":"Seven seas (open ocean)",
+"pop":1265711,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"MRT":{
+"name":"Mauritania",
+"lon":-9.74,
+"lat":19.587,
+"continent":"Africa",
+"pop":4525696,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"MLT":{
+"name":"Malta",
+"lon":14.433,
+"lat":35.893,
+"continent":"Europe",
+"pop":502653,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"MLI":{
+"name":"Mali",
+"lon":-2.038,
+"lat":18.693,
+"continent":"Africa",
+"pop":19658031,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"MDV":{
+"name":"Maldives",
+"lon":73.508,
+"lat":4.174,
+"continent":"Seven seas (open ocean)",
+"pop":530953,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"MYS":{
+"name":"Malaysia",
+"lon":113.837,
+"lat":2.529,
+"continent":"Asia",
+"pop":31949777,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"MWI":{
+"name":"Malawi",
+"lon":33.608,
+"lat":-13.387,
+"continent":"Africa",
+"pop":18628747,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"MDG":{
+"name":"Madagascar",
+"lon":46.704,
+"lat":-18.628,
+"continent":"Africa",
+"pop":26969307,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"MKD":{
+"name":"North Macedonia",
+"lon":21.556,
+"lat":41.558,
+"continent":"Europe",
+"pop":2083459,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"LUX":{
+"name":"Luxembourg",
+"lon":6.078,
+"lat":49.734,
+"continent":"Europe",
+"pop":619896,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"LTU":{
+"name":"Lithuania",
+"lon":24.09,
+"lat":55.104,
+"continent":"Europe",
+"pop":2786844,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"LIE":{
+"name":"Liechtenstein",
+"lon":9.559,
+"lat":47.111,
+"continent":"Europe",
+"pop":38019,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"LBY":{
+"name":"Libya",
+"lon":18.011,
+"lat":26.639,
+"continent":"Africa",
+"pop":6777452,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"LBR":{
+"name":"Liberia",
+"lon":-9.46,
+"lat":6.447,
+"continent":"Africa",
+"pop":4937374,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"LSO":{
+"name":"Lesotho",
+"lon":28.247,
+"lat":-29.48,
+"continent":"Africa",
+"pop":2125268,
+"region":"Africa",
+"subregion":"Southern Africa"
+},
+"LBN":{
+"name":"Lebanon",
+"lon":35.993,
+"lat":34.133,
+"continent":"Asia",
+"pop":6855713,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"LVA":{
+"name":"Latvia",
+"lon":25.459,
+"lat":57.067,
+"continent":"Europe",
+"pop":1912789,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"LAO":{
+"name":"Laos",
+"lon":102.534,
+"lat":19.432,
+"continent":"Asia",
+"pop":7169455,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"KGZ":{
+"name":"Kyrgyzstan",
+"lon":74.533,
+"lat":41.669,
+"continent":"Asia",
+"pop":6456900,
+"region":"Asia",
+"subregion":"Central Asia"
+},
+"KWT":{
+"name":"Kuwait",
+"lon":47.314,
+"lat":29.414,
+"continent":"Asia",
+"pop":4207083,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"XKX":{
+"name":"Kosovo",
+"lon":20.861,
+"lat":42.594,
+"continent":"Europe",
+"pop":1794248,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"KIR":{
+"name":"Kiribati",
+"lon":-157.385,
+"lat":1.82,
+"continent":"Oceania",
+"pop":117606,
+"region":"Oceania",
+"subregion":"Micronesia"
+},
+"KEN":{
+"name":"Kenya",
+"lon":37.908,
+"lat":0.549,
+"continent":"Africa",
+"pop":52573973,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"KAZ":{
+"name":"Kazakhstan",
+"lon":68.686,
+"lat":49.054,
+"continent":"Asia",
+"pop":18513930,
+"region":"Asia",
+"subregion":"Central Asia"
+},
+"JOR":{
+"name":"Jordan",
+"lon":36.376,
+"lat":30.805,
+"continent":"Asia",
+"pop":10101694,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"JPN":{
+"name":"Japan",
+"lon":138.442,
+"lat":36.143,
+"continent":"Asia",
+"pop":126264931,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"JAM":{
+"name":"Jamaica",
+"lon":-77.319,
+"lat":18.137,
+"continent":"North America",
+"pop":2948279,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"ITA":{
+"name":"Italy",
+"lon":11.077,
+"lat":44.732,
+"continent":"Europe",
+"pop":60297396,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"ISR":{
+"name":"Israel",
+"lon":34.848,
+"lat":30.911,
+"continent":"Asia",
+"pop":9053300,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"PSE":{
+"name":"Palestine",
+"lon":35.291,
+"lat":32.047,
+"continent":"Asia",
+"pop":4685306,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"IRL":{
+"name":"Ireland",
+"lon":-7.799,
+"lat":53.079,
+"continent":"Europe",
+"pop":4941444,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"IRQ":{
+"name":"Iraq",
+"lon":43.262,
+"lat":33.094,
+"continent":"Asia",
+"pop":39309783,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"IRN":{
+"name":"Iran",
+"lon":54.931,
+"lat":32.166,
+"continent":"Asia",
+"pop":82913906,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"IDN":{
+"name":"Indonesia",
+"lon":101.893,
+"lat":-0.954,
+"continent":"Asia",
+"pop":270625568,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"IND":{
+"name":"India",
+"lon":79.358,
+"lat":22.687,
+"continent":"Asia",
+"pop":1366417754,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"ISL":{
+"name":"Iceland",
+"lon":-18.674,
+"lat":64.779,
+"continent":"Europe",
+"pop":361313,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"HUN":{
+"name":"Hungary",
+"lon":19.448,
+"lat":47.087,
+"continent":"Europe",
+"pop":9769949,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"HND":{
+"name":"Honduras",
+"lon":-86.888,
+"lat":14.795,
+"continent":"North America",
+"pop":9746117,
+"region":"Americas",
+"subregion":"Central America"
+},
+"HTI":{
+"name":"Haiti",
+"lon":-72.224,
+"lat":19.264,
+"continent":"North America",
+"pop":11263077,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"GUY":{
+"name":"Guyana",
+"lon":-58.943,
+"lat":5.124,
+"continent":"South America",
+"pop":782766,
+"region":"Americas",
+"subregion":"South America"
+},
+"GNB":{
+"name":"Guinea-Bissau",
+"lon":-14.524,
+"lat":12.164,
+"continent":"Africa",
+"pop":1920922,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"GIN":{
+"name":"Guinea",
+"lon":-10.016,
+"lat":10.619,
+"continent":"Africa",
+"pop":12771246,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"GTM":{
+"name":"Guatemala",
+"lon":-90.497,
+"lat":14.982,
+"continent":"North America",
+"pop":16604026,
+"region":"Americas",
+"subregion":"Central America"
+},
+"GRD":{
+"name":"Grenada",
+"lon":-61.68,
+"lat":12.113,
+"continent":"North America",
+"pop":112003,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"GRC":{
+"name":"Greece",
+"lon":21.726,
+"lat":39.493,
+"continent":"Europe",
+"pop":10716322,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"GHA":{
+"name":"Ghana",
+"lon":-1.037,
+"lat":7.718,
+"continent":"Africa",
+"pop":30417856,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"DEU":{
+"name":"Germany",
+"lon":9.678,
+"lat":50.962,
+"continent":"Europe",
+"pop":83132799,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"GEO":{
+"name":"Georgia",
+"lon":43.736,
+"lat":41.87,
+"continent":"Asia",
+"pop":3720382,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"GMB":{
+"name":"The Gambia",
+"lon":-14.998,
+"lat":13.642,
+"continent":"Africa",
+"pop":2347706,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"GAB":{
+"name":"Gabon",
+"lon":11.836,
+"lat":-0.438,
+"continent":"Africa",
+"pop":2172579,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"FRA":{
+"name":"France",
+"lon":2.552,
+"lat":46.696,
+"continent":"Europe",
+"pop":67059887,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"SPM":{
+"name":"Saint Pierre and Miquelon",
+"lon":-56.332,
+"lat":47.04,
+"continent":"North America",
+"pop":5997,
+"region":"Americas",
+"subregion":"Northern America"
+},
+"WLF":{
+"name":"Wallis and Futuna",
+"lon":-178.137,
+"lat":-14.286,
+"continent":"Oceania",
+"pop":11558,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"MAF":{
+"name":"Saint Martin",
+"lon":-63.049,
+"lat":18.081,
+"continent":"North America",
+"pop":38002,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"BLM":{
+"name":"Saint Barthélemy",
+"lon":-62.833,
+"lat":17.902,
+"continent":"North America",
+"pop":9961,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"PYF":{
+"name":"French Polynesia",
+"lon":-149.462,
+"lat":-17.628,
+"continent":"Oceania",
+"pop":279287,
+"region":"Oceania",
+"subregion":"Polynesia"
+},
+"NCL":{
+"name":"New Caledonia",
+"lon":165.084,
+"lat":-21.065,
+"continent":"Oceania",
+"pop":287800,
+"region":"Oceania",
+"subregion":"Melanesia"
+},
+"ATF":{
+"name":"French Southern and Antarctic Lands",
+"lon":69.122,
+"lat":-49.304,
+"continent":"Seven seas (open ocean)",
+"pop":140,
+"region":"Africa",
+"subregion":"Seven seas (open ocean)"
+},
+"ALA":{
+"name":"Åland",
+"lon":19.87,
+"lat":60.156,
+"continent":"Europe",
+"pop":29884,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"FIN":{
+"name":"Finland",
+"lon":27.276,
+"lat":63.252,
+"continent":"Europe",
+"pop":5520314,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"FJI":{
+"name":"Fiji",
+"lon":177.975,
+"lat":-17.826,
+"continent":"Oceania",
+"pop":889953,
+"region":"Oceania",
+"subregion":"Melanesia"
+},
+"ETH":{
+"name":"Ethiopia",
+"lon":39.089,
+"lat":8.033,
+"continent":"Africa",
+"pop":112078730,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"EST":{
+"name":"Estonia",
+"lon":25.867,
+"lat":58.725,
+"continent":"Europe",
+"pop":1326590,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"ERI":{
+"name":"Eritrea",
+"lon":38.286,
+"lat":15.787,
+"continent":"Africa",
+"pop":6081196,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"GNQ":{
+"name":"Equatorial Guinea",
+"lon":8.99,
+"lat":2.333,
+"continent":"Africa",
+"pop":1355986,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"SLV":{
+"name":"El Salvador",
+"lon":-88.89,
+"lat":13.685,
+"continent":"North America",
+"pop":6453553,
+"region":"Americas",
+"subregion":"Central America"
+},
+"EGY":{
+"name":"Egypt",
+"lon":29.446,
+"lat":26.186,
+"continent":"Africa",
+"pop":100388073,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"ECU":{
+"name":"Ecuador",
+"lon":-78.188,
+"lat":-1.259,
+"continent":"South America",
+"pop":17373662,
+"region":"Americas",
+"subregion":"South America"
+},
+"DOM":{
+"name":"Dominican Republic",
+"lon":-70.654,
+"lat":19.104,
+"continent":"North America",
+"pop":10738958,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"DMA":{
+"name":"Dominica",
+"lon":-61.345,
+"lat":15.459,
+"continent":"North America",
+"pop":71808,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"DJI":{
+"name":"Djibouti",
+"lon":42.499,
+"lat":11.976,
+"continent":"Africa",
+"pop":973560,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"GRL":{
+"name":"Greenland",
+"lon":-39.335,
+"lat":74.319,
+"continent":"North America",
+"pop":56225,
+"region":"Americas",
+"subregion":"Northern America"
+},
+"FRO":{
+"name":"Faroe Islands",
+"lon":-7.058,
+"lat":62.186,
+"continent":"Europe",
+"pop":48678,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"DNK":{
+"name":"Denmark",
+"lon":9.018,
+"lat":55.967,
+"continent":"Europe",
+"pop":5818553,
+"region":"Europe",
+"subregion":"Northern Europe"
+},
+"CZE":{
+"name":"Czech Republic",
+"lon":15.378,
+"lat":49.882,
+"continent":"Europe",
+"pop":10669709,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"CYN":{
+"name":"Turkish Republic of Northern Cyprus",
+"lon":33.692,
+"lat":35.216,
+"continent":"Asia",
+"pop":326000,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"CYP":{
+"name":"Cyprus",
+"lon":33.084,
+"lat":34.913,
+"continent":"Asia",
+"pop":1198575,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"CUB":{
+"name":"Cuba",
+"lon":-77.976,
+"lat":21.334,
+"continent":"North America",
+"pop":11333483,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"HRV":{
+"name":"Croatia",
+"lon":16.372,
+"lat":45.806,
+"continent":"Europe",
+"pop":4067500,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"CIV":{
+"name":"Ivory Coast",
+"lon":-5.569,
+"lat":7.491,
+"continent":"Africa",
+"pop":25716544,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"CRI":{
+"name":"Costa Rica",
+"lon":-84.078,
+"lat":10.065,
+"continent":"North America",
+"pop":5047561,
+"region":"Americas",
+"subregion":"Central America"
+},
+"COD":{
+"name":"Democratic Republic of the Congo",
+"lon":23.459,
+"lat":-1.858,
+"continent":"Africa",
+"pop":86790567,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"COG":{
+"name":"Republic of the Congo",
+"lon":15.9,
+"lat":0.142,
+"continent":"Africa",
+"pop":5380508,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"COM":{
+"name":"Comoros",
+"lon":43.318,
+"lat":-11.728,
+"continent":"Africa",
+"pop":850886,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"COL":{
+"name":"Colombia",
+"lon":-73.174,
+"lat":3.373,
+"continent":"South America",
+"pop":50339443,
+"region":"Americas",
+"subregion":"South America"
+},
+"CHN":{
+"name":"People's Republic of China",
+"lon":106.337,
+"lat":32.498,
+"continent":"Asia",
+"pop":1397715000,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"MAC":{
+"name":"Macau",
+"lon":113.556,
+"lat":22.13,
+"continent":"Asia",
+"pop":640445,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"HKG":{
+"name":"Hong Kong",
+"lon":114.098,
+"lat":22.449,
+"continent":"Asia",
+"pop":7507400,
+"region":"Asia",
+"subregion":"Eastern Asia"
+},
+"CHL":{
+"name":"Chile",
+"lon":-72.319,
+"lat":-38.152,
+"continent":"South America",
+"pop":18952038,
+"region":"Americas",
+"subregion":"South America"
+},
+"TCD":{
+"name":"Chad",
+"lon":18.645,
+"lat":15.143,
+"continent":"Africa",
+"pop":15946876,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"CAF":{
+"name":"Central African Republic",
+"lon":20.907,
+"lat":6.99,
+"continent":"Africa",
+"pop":4745185,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"CPV":{
+"name":"Cape Verde",
+"lon":-23.639,
+"lat":15.075,
+"continent":"Africa",
+"pop":549935,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"CAN":{
+"name":"Canada",
+"lon":-101.911,
+"lat":60.324,
+"continent":"North America",
+"pop":37589262,
+"region":"Americas",
+"subregion":"Northern America"
+},
+"CMR":{
+"name":"Cameroon",
+"lon":12.473,
+"lat":4.585,
+"continent":"Africa",
+"pop":25876380,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"KHM":{
+"name":"Cambodia",
+"lon":104.505,
+"lat":12.648,
+"continent":"Asia",
+"pop":16486542,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"MMR":{
+"name":"Myanmar",
+"lon":95.804,
+"lat":21.574,
+"continent":"Asia",
+"pop":54045420,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"BDI":{
+"name":"Burundi",
+"lon":29.917,
+"lat":-3.333,
+"continent":"Africa",
+"pop":11530580,
+"region":"Africa",
+"subregion":"Eastern Africa"
+},
+"BFA":{
+"name":"Burkina Faso",
+"lon":-1.364,
+"lat":12.673,
+"continent":"Africa",
+"pop":20321378,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"BGR":{
+"name":"Bulgaria",
+"lon":25.157,
+"lat":42.509,
+"continent":"Europe",
+"pop":6975761,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"BRN":{
+"name":"Brunei",
+"lon":114.552,
+"lat":4.448,
+"continent":"Asia",
+"pop":433285,
+"region":"Asia",
+"subregion":"South-Eastern Asia"
+},
+"BRA":{
+"name":"Brazil",
+"lon":-49.559,
+"lat":-12.099,
+"continent":"South America",
+"pop":211049527,
+"region":"Americas",
+"subregion":"South America"
+},
+"BWA":{
+"name":"Botswana",
+"lon":24.179,
+"lat":-22.103,
+"continent":"Africa",
+"pop":2303697,
+"region":"Africa",
+"subregion":"Southern Africa"
+},
+"BIH":{
+"name":"Bosnia and Herzegovina",
+"lon":18.068,
+"lat":44.091,
+"continent":"Europe",
+"pop":3301000,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"BOL":{
+"name":"Bolivia",
+"lon":-64.593,
+"lat":-16.666,
+"continent":"South America",
+"pop":11513100,
+"region":"Americas",
+"subregion":"South America"
+},
+"BTN":{
+"name":"Bhutan",
+"lon":90.04,
+"lat":27.537,
+"continent":"Asia",
+"pop":763092,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"BEN":{
+"name":"Benin",
+"lon":2.352,
+"lat":10.325,
+"continent":"Africa",
+"pop":11801151,
+"region":"Africa",
+"subregion":"Western Africa"
+},
+"BLZ":{
+"name":"Belize",
+"lon":-88.713,
+"lat":17.202,
+"continent":"North America",
+"pop":390353,
+"region":"Americas",
+"subregion":"Central America"
+},
+"BEL":{
+"name":"Belgium",
+"lon":4.8,
+"lat":50.785,
+"continent":"Europe",
+"pop":11484055,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"BLR":{
+"name":"Belarus",
+"lon":28.418,
+"lat":53.822,
+"continent":"Europe",
+"pop":9466856,
+"region":"Europe",
+"subregion":"Eastern Europe"
+},
+"BRB":{
+"name":"Barbados",
+"lon":-59.569,
+"lat":13.164,
+"continent":"North America",
+"pop":287025,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"BGD":{
+"name":"Bangladesh",
+"lon":89.685,
+"lat":24.215,
+"continent":"Asia",
+"pop":163046161,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"BHR":{
+"name":"Bahrain",
+"lon":50.555,
+"lat":26.056,
+"continent":"Asia",
+"pop":1641172,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"BHS":{
+"name":"The Bahamas",
+"lon":-77.147,
+"lat":26.402,
+"continent":"North America",
+"pop":389482,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"AZE":{
+"name":"Azerbaijan",
+"lon":47.211,
+"lat":40.402,
+"continent":"Asia",
+"pop":10023318,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"AUT":{
+"name":"Austria",
+"lon":14.131,
+"lat":47.519,
+"continent":"Europe",
+"pop":8877067,
+"region":"Europe",
+"subregion":"Western Europe"
+},
+"AUS":{
+"name":"Australia",
+"lon":134.05,
+"lat":-24.13,
+"continent":"Oceania",
+"pop":25364307,
+"region":"Oceania",
+"subregion":"Australia and New Zealand"
+},
+"IOA":{
+"name":"Australian Indian Ocean Territories",
+"lon":105.673,
+"lat":-10.491,
+"continent":"Asia",
+"pop":2387,
+"region":"Africa",
+"subregion":"Seven seas (open ocean)"
+},
+"HMD":{
+"name":"Heard Island and McDonald Islands",
+"lon":73.505,
+"lat":-53.103,
+"continent":"Seven seas (open ocean)",
+"pop":0,
+"region":"Africa",
+"subregion":"Seven seas (open ocean)"
+},
+"NFK":{
+"name":"Norfolk Island",
+"lon":167.955,
+"lat":-29.033,
+"continent":"Oceania",
+"pop":2169,
+"region":"Oceania",
+"subregion":"Australia and New Zealand"
+},
+"ATC":{
+"name":"Ashmore and Cartier Islands",
+"lon":123.586,
+"lat":-12.433,
+"continent":"Oceania",
+"pop":0,
+"region":"Oceania",
+"subregion":"Australia and New Zealand"
+},
+"ARM":{
+"name":"Armenia",
+"lon":44.801,
+"lat":40.459,
+"continent":"Asia",
+"pop":2957731,
+"region":"Asia",
+"subregion":"Western Asia"
+},
+"ARG":{
+"name":"Argentina",
+"lon":-64.173,
+"lat":-33.501,
+"continent":"South America",
+"pop":44938712,
+"region":"Americas",
+"subregion":"South America"
+},
+"ATG":{
+"name":"Antigua and Barbuda",
+"lon":-61.791,
+"lat":17.352,
+"continent":"North America",
+"pop":97118,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"AGO":{
+"name":"Angola",
+"lon":17.984,
+"lat":-12.183,
+"continent":"Africa",
+"pop":31825295,
+"region":"Africa",
+"subregion":"Middle Africa"
+},
+"AND":{
+"name":"Andorra",
+"lon":1.539,
+"lat":42.548,
+"continent":"Europe",
+"pop":77142,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"DZA":{
+"name":"Algeria",
+"lon":2.808,
+"lat":27.397,
+"continent":"Africa",
+"pop":43053054,
+"region":"Africa",
+"subregion":"Northern Africa"
+},
+"ALB":{
+"name":"Albania",
+"lon":20.114,
+"lat":40.655,
+"continent":"Europe",
+"pop":2854191,
+"region":"Europe",
+"subregion":"Southern Europe"
+},
+"AFG":{
+"name":"Afghanistan",
+"lon":66.497,
+"lat":34.164,
+"continent":"Asia",
+"pop":38041754,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"KAS":{
+"name":"Siachen Glacier",
+"lon":77.13,
+"lat":35.341,
+"continent":"Asia",
+"pop":6000,
+"region":"Asia",
+"subregion":"Southern Asia"
+},
+"SXM":{
+"name":"Sint Maarten",
+"lon":-63.07,
+"lat":18.041,
+"continent":"North America",
+"pop":40733,
+"region":"Americas",
+"subregion":"Caribbean"
+},
+"TUV":{
+"name":"Tuvalu",
+"lon":179.21,
+"lat":-8.514,
+"continent":"Oceania",
+"pop":11646,
+"region":"Oceania",
+"subregion":"Polynesia"
+}
+}

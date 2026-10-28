@@ -1,0 +1,535 @@
+{
+ "origins": {
+  "top": [
+   {
+    "iso": "GBR",
+    "name": "Britain",
+    "n": 72
+   },
+   {
+    "iso": "FRA",
+    "name": "France",
+    "n": 57
+   },
+   {
+    "iso": "USA",
+    "name": "United States",
+    "n": 51
+   },
+   {
+    "iso": "ESP",
+    "name": "Spain",
+    "n": 39
+   },
+   {
+    "iso": "DEU",
+    "name": "Germany",
+    "n": 38
+   },
+   {
+    "iso": "ITA",
+    "name": "Italy",
+    "n": 24
+   },
+   {
+    "iso": "RUS",
+    "name": "Russia",
+    "n": 18
+   },
+   {
+    "iso": "CHN",
+    "name": "People's Republic of China",
+    "n": 17
+   },
+   {
+    "iso": "BEL",
+    "name": "Belgium",
+    "n": 16
+   },
+   {
+    "iso": "JPN",
+    "name": "Japan",
+    "n": 13
+   },
+   {
+    "iso": "CHE",
+    "name": "Switzerland",
+    "n": 11
+   },
+   {
+    "iso": "AUS",
+    "name": "Australia",
+    "n": 11
+   }
+  ],
+  "n_countries": 78,
+  "europe_share": 0.6858638743455497,
+  "n_compared": 319,
+  "n_disagree": 8,
+  "n_extra": 5,
+  "src_fci": 363,
+  "src_wd": 168,
+  "src_wp": 42,
+  "by_country": {
+   "ITA": 24,
+   "DEU": 38,
+   "AFG": 2,
+   "MAR": 3,
+   "GBR": 72,
+   "TUR": 9,
+   "JPN": 13,
+   "ESP": 39,
+   "USA": 51,
+   "GRC": 7,
+   "AUT": 5,
+   "CHE": 11,
+   "ARG": 4,
+   "FRA": 57,
+   "EGY": 1,
+   "ARM": 1,
+   "AUS": 11,
+   "MLI": 1,
+   "PRT": 11,
+   "IND": 9,
+   "BIH": 2,
+   "COD": 1,
+   "BEL": 16,
+   "NOR": 8,
+   "RUS": 18,
+   "ZAF": 2,
+   "CZE": 6,
+   "BRA": 11,
+   "DNK": 4,
+   "ROU": 4,
+   "BGR": 2,
+   "PAK": 3,
+   "MNG": 1,
+   "VNM": 4,
+   "MEX": 3,
+   "ISR": 1,
+   "CAN": 3,
+   "IRL": 10,
+   "CHL": 2,
+   "CHN": 17,
+   "UKR": 1,
+   "URY": 1,
+   "MDG": 1,
+   "HRV": 6,
+   "NLD": 9,
+   "SWE": 9,
+   "ECU": 1,
+   "EST": 1,
+   "FIN": 6,
+   "TWN": 1,
+   "GEO": 1,
+   "GRL": 1,
+   "CUB": 1,
+   "NPL": 1,
+   "NZL": 2,
+   "ISL": 1,
+   "KOR": 4,
+   "SVN": 1,
+   "KAZ": 1,
+   "IDN": 1,
+   "HUN": 9,
+   "IRQ": 1,
+   "LTU": 1,
+   "MKD": 2,
+   "MNE": 1,
+   "GIN": 1,
+   "COL": 1,
+   "PER": 1,
+   "MLT": 1,
+   "POL": 5,
+   "PRK": 1,
+   "IRN": 1,
+   "BGD": 1,
+   "SRB": 2,
+   "SVK": 4,
+   "KGZ": 1,
+   "MYS": 1,
+   "THA": 2
+  }
+ },
+ "meta": {
+  "n_wd": 1148,
+  "n_fci": 364,
+  "n_study": 573,
+  "n_fci_study": 363,
+  "n_origin_countries": 78,
+  "retrieved": "28 October 2026",
+  "n_clubs": 10,
+  "n_langs": 42,
+  "n_countries_coloured": 101
+ },
+ "clubs": {
+  "n_top_abroad": 8,
+  "n_top_gbr": 6,
+  "home_top_list": "Germany (German Shepherd) and the UK (Labrador Retriever)",
+  "top10_abroad_share": 0.7945205479452054,
+  "n_top10": 73,
+  "list": "Dogs Australia (ANKC) (Australia, 2025); Canadian Kennel Club (CKC) (Canada, 2025); Suomen Kennelliitto (Finland, 2024); Société Centrale Canine (LOF) (France, 2025); VDH (Germany, 2025); Japan Kennel Club (JKC) (Japan, 2025); Norsk Kennel Klub (NKK) (Norway, 2025); Svenska Kennelklubben (SKK) (Sweden, 2025); Royal Kennel Club (UK, 2025); American Kennel Club (AKC) (United States, 2025)",
+  "top": {
+   "AUS": {
+    "breed": "Golden Retriever",
+    "origin": "GBR",
+    "count": "3776",
+    "source": "Dogs Australia (ANKC)",
+    "year": "2025"
+   },
+   "CAN": {
+    "breed": "Labrador Retriever",
+    "origin": "GBR",
+    "count": "",
+    "source": "Canadian Kennel Club (CKC)",
+    "year": "2025"
+   },
+   "DEU": {
+    "breed": "German Shepherd",
+    "origin": "DEU",
+    "count": "6374",
+    "source": "VDH",
+    "year": "2025"
+   },
+   "FIN": {
+    "breed": "Labrador Retriever",
+    "origin": "GBR",
+    "count": "2330",
+    "source": "Suomen Kennelliitto",
+    "year": "2024"
+   },
+   "FRA": {
+    "breed": "Golden Retriever",
+    "origin": "GBR",
+    "count": "15000",
+    "source": "Société Centrale Canine (LOF)",
+    "year": "2025"
+   },
+   "GBR": {
+    "breed": "Labrador Retriever",
+    "origin": "GBR",
+    "count": "29919",
+    "source": "Royal Kennel Club",
+    "year": "2025"
+   },
+   "JPN": {
+    "breed": "Poodle",
+    "origin": "FRA",
+    "count": "69342",
+    "source": "Japan Kennel Club (JKC)",
+    "year": "2025"
+   },
+   "NOR": {
+    "breed": "Golden Retriever",
+    "origin": "GBR",
+    "count": "",
+    "source": "Norsk Kennel Klub (NKK)",
+    "year": "2025"
+   },
+   "SWE": {
+    "breed": "Labrador Retriever",
+    "origin": "GBR",
+    "count": "2899",
+    "source": "Svenska Kennelklubben (SKK)",
+    "year": "2025"
+   },
+   "USA": {
+    "breed": "French Bulldog",
+    "origin": "FRA",
+    "count": "",
+    "source": "American Kennel Club (AKC)",
+    "year": "2025"
+   }
+  },
+  "home": {
+   "AUS": 0.0296,
+   "DEU": 0.4378,
+   "GBR": 0.6087,
+   "JPN": 0.0195
+  },
+  "totals": {
+   "GBR": 161892,
+   "DEU": 54986,
+   "AUS": 47254,
+   "JPN": 302345
+  },
+  "home_parts": {
+   "GBR": {
+    "GBR": 0.6087,
+    "DEU": 0.1953,
+    "FRA": 0.0766,
+    "other": 0.1194
+   },
+   "DEU": {
+    "DEU": 0.4378,
+    "GBR": 0.2694,
+    "FRA": 0.0514,
+    "other": 0.2414
+   },
+   "AUS": {
+    "AUS": 0.0296,
+    "GBR": 0.4853,
+    "DEU": 0.181,
+    "USA": 0.0528,
+    "FRA": 0.0506,
+    "other": 0.2008
+   },
+   "JPN": {
+    "JPN": 0.0195,
+    "FRA": 0.2625,
+    "DEU": 0.2426,
+    "MEX": 0.1529,
+    "GBR": 0.1433,
+    "CHN": 0.058,
+    "ITA": 0.0442,
+    "other": 0.0771
+   }
+  }
+ },
+ "frenchie": {
+  "uk_peak": 54074,
+  "uk_peak_year": "2021",
+  "uk_2025": 7750,
+  "uk_drop": 0.8566778858601176,
+  "uk_2018": 36785,
+  "lab_2018": 36526,
+  "uk_rank_2025": 5,
+  "jkc_rank": 7,
+  "jkc_count": 9578,
+  "akc_rank": 1,
+  "akc_years_top": "fourth",
+  "vdh_2025": 43,
+  "uk_2018_overtook": true,
+  "rise": 2.51858407079646,
+  "fall": 6.977290322580645
+ },
+ "uk": {
+  "n_points": 20,
+  "totals": {
+   "2016": 227650,
+   "2017": 243241,
+   "2018": 250562,
+   "2019": 232512,
+   "2020": 250638,
+   "2021": 348958,
+   "2022": 277000,
+   "2023": 227239,
+   "2024": 187741,
+   "2025": 161892
+  },
+  "lab_2025": 29919,
+  "lab_2021": 61559,
+  "cocker_2025": 21618,
+  "dachs_2016": 7165,
+  "dachs_2025": 14658,
+  "top5_any_year": [
+   "Bulldog",
+   "Dachshund",
+   "English Cocker Spaniel",
+   "English Springer Spaniel",
+   "French Bulldog",
+   "Golden Retriever",
+   "Labrador Retriever",
+   "Pug"
+  ]
+ },
+ "number_ones": {
+  "Golden Retriever": [
+   "AUS",
+   "FRA",
+   "NOR"
+  ],
+  "Labrador Retriever": [
+   "CAN",
+   "FIN",
+   "GBR",
+   "SWE"
+  ],
+  "German Shepherd": [
+   "DEU"
+  ],
+  "Poodle": [
+   "JPN"
+  ],
+  "French Bulldog": [
+   "USA"
+  ]
+ },
+ "proxy": {
+  "n_langs": 42,
+  "checks": [
+   {
+    "lang": "ja",
+    "iso": "JPN",
+    "proxy": "Shiba Inu",
+    "club": "Poodle",
+    "match": false,
+    "in_club_top3": false
+   },
+   {
+    "lang": "sv",
+    "iso": "SWE",
+    "proxy": "Cane Corso",
+    "club": "Labrador Retriever",
+    "match": false,
+    "in_club_top3": false
+   },
+   {
+    "lang": "fi",
+    "iso": "FIN",
+    "proxy": "Finnish Lapphund",
+    "club": "Labrador Retriever",
+    "match": false,
+    "in_club_top3": true
+   },
+   {
+    "lang": "no",
+    "iso": "NOR",
+    "proxy": "Staffordshire Bull Terrier",
+    "club": "Golden Retriever",
+    "match": false,
+    "in_club_top3": false
+   },
+   {
+    "lang": "de",
+    "iso": "DEU",
+    "proxy": "Belgian Malinois",
+    "club": "German Shepherd",
+    "match": false,
+    "in_club_top3": false
+   },
+   {
+    "lang": "fr",
+    "iso": "FRA",
+    "proxy": "Belgian Malinois",
+    "club": "Golden Retriever",
+    "match": false,
+    "in_club_top3": false
+   }
+  ],
+  "n_match": 0,
+  "n_check": 6,
+  "n_in_top3": 1,
+  "n_single": 32,
+  "n_shared": 59,
+  "check_text": "In 6 countries with both, the stand-in names the club's own number one in 0 and a club top-three breed in 1. Japanese Wikipedia's most read breed is the Shiba Inu, while the club's number one is the Poodle; Swedish Wikipedia's most read breed is the Cane Corso, while the club's number one is the Labrador Retriever; Finnish Wikipedia's most read breed is the Finnish Lapphund, which is in the club's top three (the club's number one is the Labrador Retriever); Norwegian Wikipedia's most read breed is the Staffordshire Bull Terrier, while the club's number one is the Golden Retriever; German Wikipedia's most read breed is the Belgian Malinois, while the club's number one is the German Shepherd; French Wikipedia's most read breed is the Belgian Malinois, while the club's number one is the Golden Retriever. So read the striped countries as a rough guide to which breeds people are curious about, not a census.",
+  "top_counts": {
+   "Cane Corso": 12,
+   "German Shepherd": 5,
+   "Belgian Malinois": 3,
+   "Border Collie": 3,
+   "Golden Retriever": 2,
+   "American Staffordshire Terrier": 2,
+   "Havanese": 1,
+   "Australian Shepherd": 1,
+   "Finnish Lapphund": 1,
+   "Canaan Dog": 1,
+   "Rottweiler": 1,
+   "Icelandic Sheepdog": 1,
+   "Shiba Inu": 1,
+   "Caucasian Shepherd Dog": 1,
+   "Poodle": 1,
+   "Labrador Retriever": 1,
+   "Dingo": 1,
+   "Rhodesian Ridgeback": 1,
+   "Staffordshire Bull Terrier": 1,
+   "Kangal Shepherd Dog": 1,
+   "Chihuahua": 1
+  },
+  "cane_n": 12,
+  "en_top": "Cane Corso",
+  "en_top_views": 1248433,
+  "home_editions": [
+   "fi",
+   "he",
+   "is",
+   "ja",
+   "tr"
+  ],
+  "home_editions_text": "Finnish Lapphund (Finnish), Canaan Dog (Hebrew), Icelandic Sheepdog (Icelandic), Shiba Inu (Japanese), Kangal Shepherd Dog (Turkish)"
+ },
+ "stories": [
+  {
+   "breed": "Golden Retriever",
+   "origin": "GBR",
+   "big": "No. 1",
+   "bigl": "in Australia, France, Norway",
+   "text": "Bred at Guisachan in the Scottish Highlands; top of the French LOF (a little over 15,000 births, as reported) and of Dogs Australia (3,776 registrations in 2025).",
+   "from": "UK"
+  },
+  {
+   "breed": "Labrador Retriever",
+   "origin": "GBR",
+   "big": "No. 1",
+   "bigl": "in Canada, Finland, UK, Sweden",
+   "text": "Developed in Britain from Newfoundland water dogs; the Royal Kennel Club still registered 29,919 in 2025.",
+   "from": "UK"
+  },
+  {
+   "breed": "Poodle",
+   "origin": "FRA",
+   "big": "No. 1",
+   "bigl": "in Japan",
+   "text": "Filed by the FCI under France; 69,342 registered with the Japan Kennel Club in 2025, most of them toy poodles.",
+   "from": "France"
+  },
+  {
+   "breed": "Chihuahua",
+   "origin": "MEX",
+   "big": "No. 2",
+   "bigl": "in Japan",
+   "text": "A Mexican breed; 46,221 JKC registrations in 2025.",
+   "from": "Mexico"
+  }
+ ],
+ "disagree": [
+  [
+   "American Akita",
+   "Japan",
+   "",
+   "United States"
+  ],
+  [
+   "Basset Hound",
+   "Great Britain",
+   "",
+   "France"
+  ],
+  [
+   "Pharaoh Hound",
+   "Malta",
+   "patronage Great Britain",
+   "Egypt"
+  ],
+  [
+   "Pyrenean Mountain Dog",
+   "France",
+   "",
+   "Spain"
+  ],
+  [
+   "Rhodesian Ridgeback",
+   "South Africa",
+   "",
+   "Zimbabwe"
+  ],
+  [
+   "Siberian Husky",
+   "United States Of America",
+   "",
+   "Russia"
+  ],
+  [
+   "Slovak Cuvac",
+   "Slovakia",
+   "",
+   "Czechia"
+  ],
+  [
+   "Ukrainian Vivcharka",
+   "Russian Federation",
+   "",
+   "Ukraine"
+  ]
+ ]
+}

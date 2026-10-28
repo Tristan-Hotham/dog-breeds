@@ -1,0 +1,9 @@
+qid,name,fci_num,fci_country,fci_patronage,fci_development,wd_origin,wd_origin_detail,enwiki_country
+Q37534,American Akita,344,Japan,,United States Of America,USA,,Japan
+Q37716,Basset Hound,163,Great Britain,,,FRA,,France
+Q38808,Pharaoh Hound,248,Malta,Great Britain,,EGY,,Malta
+Q37803,Pyrenean Mountain Dog,137,France,,,ESP,,"France, Spain, Andorra"
+Q39026,Rhodesian Ridgeback,146,South Africa,,,ZWE,,Southern Africa
+Q39295,Siberian Husky,270,United States Of America,,,RUS,Siberia,Siberia
+Q38963,Slovak Cuvac,142,Slovakia,,,CZE,Czechoslovakia,
+Q38546,Ukrainian Vivcharka,326,Russian Federation,,,UKR,,

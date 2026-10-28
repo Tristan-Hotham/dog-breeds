@@ -1,0 +1,102 @@
+iso3,country,basis,source,year,top_qid,top_breed,top_origin,top_count,top_share,home_share,top10_abroad,top10_n,lang,note
+AUS,Australia,club,Dogs Australia (ANKC),2025,Q38686,Golden Retriever,GBR,3776,0.0799,0.0296,10,10,,
+CAN,Canada,club,Canadian Kennel Club (CKC),2025,Q38726,Labrador Retriever,GBR,,,,4,4,,"rank only, top four"
+DEU,Germany,club,VDH,2025,Q38280,German Shepherd,DEU,6374,0.1159,0.4378,3,10,,puppies bred in VDH member clubs
+FIN,Finland,club,Suomen Kennelliitto,2024,Q38726,Labrador Retriever,GBR,2330,,,2,3,,2024 figures
+FRA,France,club,Société Centrale Canine (LOF),2025,Q38686,Golden Retriever,GBR,15000,,,3,3,,"LOF registrations, top three as reported"
+GBR,United Kingdom,club,Royal Kennel Club,2025,Q38726,Labrador Retriever,GBR,29919,0.1848,0.6087,4,10,,
+JPN,Japan,club,Japan Kennel Club (JKC),2025,Q38904,Poodle,FRA,69342,0.2293,0.0195,10,10,,
+NOR,Norway,club,Norsk Kennel Klub (NKK),2025,Q38686,Golden Retriever,GBR,,,,3,3,,top three as listed
+SWE,Sweden,club,Svenska Kennelklubben (SKK),2025,Q38726,Labrador Retriever,GBR,2899,,,9,10,,top 20 published
+USA,United States of America,club,American Kennel Club (AKC),2025,Q29149,French Bulldog,FRA,,,,10,10,,rank only
+KOR,South Korea,proxy_single,Korean Wikipedia pageviews,2025 to 2026,Q38904,Poodle,FRA,17712,,,,,ko,12 months to September 2026
+POL,Poland,proxy_single,Polish Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,162766,,,,,pl,12 months to September 2026
+CZE,Czech Republic,proxy_single,Czech Wikipedia pageviews,2025 to 2026,Q37688,American Staffordshire Terrier,USA,45418,,,,,cs,12 months to September 2026
+SVK,Slovakia,proxy_single,Slovak Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,16220,,,,,sk,12 months to September 2026
+HUN,Hungary,proxy_single,Hungarian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,34324,,,,,hu,12 months to September 2026
+ITA,Italy,proxy_single,Italian Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,138005,,,,,it,12 months to September 2026
+SMR,San Marino,proxy_single,Italian Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,138005,,,,,it,12 months to September 2026
+DNK,Denmark,proxy_single,Danish Wikipedia pageviews,2025 to 2026,Q38449,Havanese,CUB,12346,,,,,da,12 months to September 2026
+ISL,Iceland,proxy_single,Icelandic Wikipedia pageviews,2025 to 2026,Q38710,Icelandic Sheepdog,ISL,1499,,,,,is,12 months to September 2026
+EST,Estonia,proxy_single,Estonian Wikipedia pageviews,2025 to 2026,Q37629,Australian Shepherd,USA,3477,,,,,et,12 months to September 2026
+LVA,Latvia,proxy_single,Latvian Wikipedia pageviews,2025 to 2026,Q38726,Labrador Retriever,GBR,2330,,,,,lv,12 months to September 2026
+LTU,Lithuania,proxy_single,Lithuanian Wikipedia pageviews,2025 to 2026,Q37688,American Staffordshire Terrier,USA,5821,,,,,lt,12 months to September 2026
+SVN,Slovenia,proxy_single,Slovene Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,4186,,,,,sl,12 months to September 2026
+HRV,Croatia,proxy_single,Croatian Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,15557,,,,,hr,12 months to September 2026
+BGR,Bulgaria,proxy_single,Bulgarian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,22297,,,,,bg,12 months to September 2026
+GRC,Greece,proxy_single,Greek Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,22802,,,,,el,12 months to September 2026
+CYP,Cyprus,proxy_single,Greek Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,22802,,,,,el,12 months to September 2026
+TUR,Turkey,proxy_single,Turkish Wikipedia pageviews,2025 to 2026,Q38508,Kangal Shepherd Dog,TUR,39792,,,,,tr,12 months to September 2026
+ISR,Israel,proxy_single,Hebrew Wikipedia pageviews,2025 to 2026,Q38602,Canaan Dog,ISR,22013,,,,,he,12 months to September 2026
+GEO,Georgia,proxy_single,Georgian Wikipedia pageviews,2025 to 2026,Q38576,Caucasian Shepherd Dog,RUS,9948,,,,,ka,12 months to September 2026
+ARM,Armenia,proxy_single,Armenian Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,2316,,,,,hy,12 months to September 2026
+THA,Thailand,proxy_single,Thai Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,12900,,,,,th,12 months to September 2026
+VNM,Vietnam,proxy_single,Vietnamese Wikipedia pageviews,2025 to 2026,Q653,Chihuahua,MEX,13918,,,,,vi,12 months to September 2026
+IDN,Indonesia,proxy_single,Indonesian Wikipedia pageviews,2025 to 2026,Q38686,Golden Retriever,GBR,12799,,,,,id,12 months to September 2026
+UKR,Ukraine,proxy_single,Ukrainian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,57683,,,,,uk,12 months to September 2026
+IRN,Iran,proxy_single,Persian Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,44681,,,,,fa,12 months to September 2026
+ROU,Romania,proxy_single,Romanian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,22452,,,,,ro,12 months to September 2026
+MDA,Moldova,proxy_single,Romanian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,22452,,,,,ro,12 months to September 2026
+MYS,Malaysia,proxy_single,Malay Wikipedia pageviews,2025 to 2026,Q38584,Dingo,,1408,,,,,ms,12 months to September 2026
+BRN,Brunei,proxy_single,Malay Wikipedia pageviews,2025 to 2026,Q38584,Dingo,,1408,,,,,ms,12 months to September 2026
+NLD,Netherlands,proxy_single,Dutch Wikipedia pageviews,2025 to 2026,Q39026,Rhodesian Ridgeback,ZAF,39815,,,,,nl,12 months to September 2026
+IND,India,proxy_single,Hindi Wikipedia pageviews,2025 to 2026,Q39093,Rottweiler,DEU,17027,,,,,hi,12 months to September 2026
+SRB,Serbia,proxy_shared,Serbian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,24186,,,,,sr,12 months to September 2026
+MNE,Montenegro,proxy_shared,Serbian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,24186,,,,,sr,12 months to September 2026
+BIH,Bosnia and Herzegovina,proxy_shared,Serbian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,24186,,,,,sr,12 months to September 2026
+AUT,Austria,proxy_shared,German Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,185823,,,,,de,12 months to September 2026
+CHE,Switzerland,proxy_shared,German Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,185823,,,,,de,12 months to September 2026
+LIE,Liechtenstein,proxy_shared,German Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,185823,,,,,de,12 months to September 2026
+LUX,Luxembourg,proxy_shared,German Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,185823,,,,,de,12 months to September 2026
+BEL,Belgium,proxy_shared,French Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,156124,,,,,fr,12 months to September 2026
+MCO,Monaco,proxy_shared,French Wikipedia pageviews,2025 to 2026,Q38494,Belgian Malinois,BEL,156124,,,,,fr,12 months to September 2026
+ESP,Spain,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+MEX,Mexico,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+COL,Colombia,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+ARG,Argentina,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+PER,Peru,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+VEN,Venezuela,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+CHL,Chile,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+ECU,Ecuador,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+GTM,Guatemala,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+CUB,Cuba,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+BOL,Bolivia,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+DOM,Dominican Republic,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+HND,Honduras,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+PRY,Paraguay,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+SLV,El Salvador,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+NIC,Nicaragua,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+CRI,Costa Rica,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+PAN,Panama,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+URY,Uruguay,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+PRI,Puerto Rico,proxy_shared,Spanish Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,230413,,,,,es,12 months to September 2026
+BRA,Brazil,proxy_shared,Portuguese Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,157861,,,,,pt,12 months to September 2026
+PRT,Portugal,proxy_shared,Portuguese Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,157861,,,,,pt,12 months to September 2026
+AGO,Angola,proxy_shared,Portuguese Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,157861,,,,,pt,12 months to September 2026
+MOZ,Mozambique,proxy_shared,Portuguese Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,157861,,,,,pt,12 months to September 2026
+RUS,Russia,proxy_shared,Russian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,194532,,,,,ru,12 months to September 2026
+BLR,Belarus,proxy_shared,Russian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,194532,,,,,ru,12 months to September 2026
+KAZ,Kazakhstan,proxy_shared,Russian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,194532,,,,,ru,12 months to September 2026
+KGZ,Kyrgyzstan,proxy_shared,Russian Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,194532,,,,,ru,12 months to September 2026
+EGY,Egypt,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+SAU,Saudi Arabia,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+DZA,Algeria,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+MAR,Morocco,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+IRQ,Iraq,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+SYR,Syria,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+JOR,Jordan,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+TUN,Tunisia,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+LBY,Libya,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+YEM,Yemen,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+ARE,United Arab Emirates,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+OMN,Oman,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+KWT,Kuwait,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+QAT,Qatar,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+BHR,Bahrain,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+LBN,Lebanon,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+PSE,Palestine,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+SDN,Sudan,proxy_shared,Arabic Wikipedia pageviews,2025 to 2026,Q38280,German Shepherd,DEU,17456,,,,,ar,12 months to September 2026
+CHN,People's Republic of China,proxy_shared,Chinese Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,66996,,,,,zh,12 months to September 2026
+TWN,Taiwan,proxy_shared,Chinese Wikipedia pageviews,2025 to 2026,Q37710,Border Collie,GBR,66996,,,,,zh,12 months to September 2026
+IRL,Ireland,proxy_shared,English Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,1248433,,,,,en,12 months to September 2026
+NZL,New Zealand,proxy_shared,English Wikipedia pageviews,2025 to 2026,Q21082,Cane Corso,ITA,1248433,,,,,en,12 months to September 2026

@@ -1,0 +1,74 @@
+iso3,rank,breed,qid,origin_iso3,count,club,year
+AUS,1,Golden Retriever,Q38686,GBR,3776,Dogs Australia (ANKC),2025
+AUS,2,Labrador Retriever,Q38726,GBR,3672,Dogs Australia (ANKC),2025
+AUS,3,Staffordshire Bull Terrier,Q39285,GBR,2757,Dogs Australia (ANKC),2025
+AUS,4,German Shepherd,Q38280,DEU,2147,Dogs Australia (ANKC),2025
+AUS,5,Border Collie,Q37710,GBR,1975,Dogs Australia (ANKC),2025
+AUS,6,Cavalier King Charles Spaniel,Q38072,GBR,1749,Dogs Australia (ANKC),2025
+AUS,7,English Cocker Spaniel,Q38533,GBR,1698,Dogs Australia (ANKC),2025
+AUS,8,Poodle,Q38904,FRA,1307,Dogs Australia (ANKC),2025
+AUS,9,Australian Shepherd,Q37629,USA,1199,Dogs Australia (ANKC),2025
+AUS,10,Rottweiler,Q39093,DEU,1164,Dogs Australia (ANKC),2025
+CAN,1,Labrador Retriever,Q38726,GBR,,Canadian Kennel Club (CKC),2025
+CAN,2,Golden Retriever,Q38686,GBR,,Canadian Kennel Club (CKC),2025
+CAN,3,German Shepherd,Q38280,DEU,,Canadian Kennel Club (CKC),2025
+CAN,4,Poodle,Q38904,FRA,,Canadian Kennel Club (CKC),2025
+DEU,1,German Shepherd,Q38280,DEU,6374,VDH,2025
+DEU,2,Dachshund,Q29099,DEU,4508,VDH,2025
+DEU,3,Labrador Retriever,Q38726,GBR,2401,VDH,2025
+DEU,4,German Wirehaired Pointer,Q37811,DEU,2215,VDH,2025
+DEU,5,Poodle,Q38904,FRA,2035,VDH,2025
+DEU,6,Golden Retriever,Q38686,GBR,2007,VDH,2025
+DEU,7,Rottweiler,Q39093,DEU,1376,VDH,2025
+DEU,8,German Shorthaired Pointer,Q38084,DEU,1198,VDH,2025
+DEU,9,Small Münsterländer,Q38036,DEU,1102,VDH,2025
+DEU,10,Boxer,Q38496,DEU,1050,VDH,2025
+FIN,1,Labrador Retriever,Q38726,GBR,2330,Suomen Kennelliitto,2024
+FIN,2,Golden Retriever,Q38686,GBR,,Suomen Kennelliitto,2024
+FIN,3,Finnish Lapphund,Q29188,FIN,,Suomen Kennelliitto,2024
+FRA,1,Golden Retriever,Q38686,GBR,15000,Société Centrale Canine (LOF),2025
+FRA,2,Australian Shepherd,Q37629,USA,14600,Société Centrale Canine (LOF),2025
+FRA,3,Staffordshire Bull Terrier,Q39285,GBR,8600,Société Centrale Canine (LOF),2025
+GBR,1,Labrador Retriever,Q38726,GBR,29919,Royal Kennel Club,2025
+GBR,2,English Cocker Spaniel,Q38533,GBR,21618,Royal Kennel Club,2025
+GBR,3,Dachshund,Q29099,DEU,14658,Royal Kennel Club,2025
+GBR,4,Golden Retriever,Q38686,GBR,9976,Royal Kennel Club,2025
+GBR,5,French Bulldog,Q29149,FRA,7750,Royal Kennel Club,2025
+GBR,6,English Springer Spaniel,Q29022,GBR,5845,Royal Kennel Club,2025
+GBR,7,Staffordshire Bull Terrier,Q39285,GBR,5375,Royal Kennel Club,2025
+GBR,8,German Shepherd,Q38280,DEU,4278,Royal Kennel Club,2025
+GBR,9,Poodle,Q38904,FRA,3813,Royal Kennel Club,2025
+GBR,10,Cavalier King Charles Spaniel,Q38072,GBR,3224,Royal Kennel Club,2025
+JPN,1,Poodle,Q38904,FRA,69342,Japan Kennel Club (JKC),2025
+JPN,2,Chihuahua,Q653,MEX,46221,Japan Kennel Club (JKC),2025
+JPN,3,Dachshund,Q29099,DEU,30615,Japan Kennel Club (JKC),2025
+JPN,4,Pomeranian,Q39579,DEU,22853,Japan Kennel Club (JKC),2025
+JPN,5,Miniature Schnauzer,Q38999,DEU,15268,Japan Kennel Club (JKC),2025
+JPN,6,Maltese,Q38751,ITA,9960,Japan Kennel Club (JKC),2025
+JPN,7,French Bulldog,Q29149,FRA,9578,Japan Kennel Club (JKC),2025
+JPN,8,Yorkshire Terrier,Q39330,GBR,8086,Japan Kennel Club (JKC),2025
+JPN,9,Bichon Frisé,Q37600,BEL,8037,Japan Kennel Club (JKC),2025
+JPN,10,Shih Tzu,Q39357,CHN,7930,Japan Kennel Club (JKC),2025
+NOR,1,Golden Retriever,Q38686,GBR,,Norsk Kennel Klub (NKK),2025
+NOR,2,Border Collie,Q37710,GBR,,Norsk Kennel Klub (NKK),2025
+NOR,3,Labrador Retriever,Q38726,GBR,,Norsk Kennel Klub (NKK),2025
+SWE,1,Labrador Retriever,Q38726,GBR,2899,Svenska Kennelklubben (SKK),2025
+SWE,2,Golden Retriever,Q38686,GBR,1702,Svenska Kennelklubben (SKK),2025
+SWE,3,German Shepherd,Q38280,DEU,1235,Svenska Kennelklubben (SKK),2025
+SWE,4,Poodle,Q38904,FRA,1118,Svenska Kennelklubben (SKK),2025
+SWE,5,Jämthund,Q38105,SWE,1117,Svenska Kennelklubben (SKK),2025
+SWE,6,English Cocker Spaniel,Q38533,GBR,987,Svenska Kennelklubben (SKK),2025
+SWE,7,Miniature American Shepherd,Q6865130,USA,943,Svenska Kennelklubben (SKK),2025
+SWE,8,Staffordshire Bull Terrier,Q39285,GBR,890,Svenska Kennelklubben (SKK),2025
+SWE,9,Havanese,Q38449,CUB,834,Svenska Kennelklubben (SKK),2025
+SWE,10,Danish Swedish Farmdog,Q29127,DNK,743,Svenska Kennelklubben (SKK),2025
+USA,1,French Bulldog,Q29149,FRA,,American Kennel Club (AKC),2025
+USA,2,Labrador Retriever,Q38726,GBR,,American Kennel Club (AKC),2025
+USA,3,Golden Retriever,Q38686,GBR,,American Kennel Club (AKC),2025
+USA,4,German Shepherd,Q38280,DEU,,American Kennel Club (AKC),2025
+USA,5,Dachshund,Q29099,DEU,,American Kennel Club (AKC),2025
+USA,6,Poodle,Q38904,FRA,,American Kennel Club (AKC),2025
+USA,7,Beagle,Q21102,GBR,,American Kennel Club (AKC),2025
+USA,8,Rottweiler,Q39093,DEU,,American Kennel Club (AKC),2025
+USA,9,German Shorthaired Pointer,Q38084,DEU,,American Kennel Club (AKC),2025
+USA,10,Bulldog,Q38383,GBR,,American Kennel Club (AKC),2025
