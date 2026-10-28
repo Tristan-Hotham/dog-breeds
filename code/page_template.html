@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Born Here, Loved There</title>
+<meta name="description" content="Where the world's dog breeds come from, and where they are loved now: {{meta.n_study|int}} breeds mapped to their countries of origin, set against kennel club registrations in {{meta.n_clubs|int}} countries and Wikipedia reading in {{meta.n_langs|int}} languages.">
+<meta property="og:title" content="Born here, loved there: where dog breeds come from and where they are loved">
+<meta property="og:description" content="{{meta.n_study|int}} breeds, {{meta.n_origin_countries|int}} countries of origin, {{meta.n_clubs|int}} kennel clubs. Britain bred the most breeds; France bred the dog America loves most.">
+<meta property="og:image" content="https://maps.tristanhotham.com/dog-breeds/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/dog-breeds/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Kennel paper: warm cream, ink, and a tan "collar" accent. Origin colours are set in the script (ORIGIN_COL). */
+:root{
+  --bg:#F8F4EC; --panel:#EFE8DB; --fg:#22201C; --muted:#6C665C; --rule:#E0D7C7; --card:#FDFBF7; --border:#CFC4B1;
+  --hot:#B5562B; --cool:#2F5D8C; --deep:#3C2F25; --land:#E9E2D4; --sea:#F3EFE7;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#18161A; --panel:#232026; --fg:#EEE9E2; --muted:#A8A1AC; --rule:#39343D; --card:#211E24; --border:#4A4450;
+  --hot:#E58A5B; --cool:#7FA8D6; --deep:#D9C3AE; --land:#2C2830; --sea:#1D1B20; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#18161A; --panel:#232026; --fg:#EEE9E2; --muted:#A8A1AC; --rule:#39343D; --card:#211E24; --border:#4A4450;
+  --hot:#E58A5B; --cool:#7FA8D6; --deep:#D9C3AE; --land:#2C2830; --sea:#1D1B20; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:700px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1140px,calc(100vw - 32px));margin-left:calc((100% - min(1140px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--deep);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(44px,11vw,96px)/.9 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .a{color:var(--cool)} h1 .b{color:var(--hot)}
+.mark{width:clamp(80px,17vw,136px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:50ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:54px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(22px,4.4vw,32px)/1 var(--display);letter-spacing:-.01em}
+.stats b.h{color:var(--hot)} .stats b.c{color:var(--cool)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:290px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.tip i{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px;border:1px solid rgba(255,255,255,.5)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.ctl-l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+select{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 6px;min-height:36px;max-width:100%}
+.searchbox{position:relative;flex:1 1 240px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 11px;min-height:40px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:340px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+.side{background:var(--card);border:1px solid var(--border);padding:12px 12px 10px;font:400 13px/1.45 var(--mono);max-height:600px;overflow:auto}
+@media (max-width:900px){.side{max-height:none}}
+.side h4{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:12px 0 8px}
+.side h4:first-child{margin-top:2px}
+.side .big{font:800 26px/1.1 var(--display);margin:2px 0 4px}
+.side .sub{color:var(--muted);font-size:12px;margin:0 0 8px}
+.side ol,.side ul{margin:4px 0 8px;padding-left:22px}
+.side li{margin:2px 0}
+.side li small{color:var(--muted)}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px;border:1px solid rgba(0,0,0,.15)}
+.lmap{height:600px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:600px){.lmap{height:440px}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.lyrBtn{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:240px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono)}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%;min-height:0}
+.lyrPanel .sub{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px;margin-top:3px}
+.lyrPanel .sub span{flex:0 0 58px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.cityL{font:500 11px/1 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.cityL i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--fg);margin-right:4px;vertical-align:1px}
+.cityL.s{font-size:10px;font-weight:400}
+.ukL{font:600 11px/1 var(--mono);color:var(--fg);white-space:nowrap;background:color-mix(in srgb,var(--card) 88%,transparent);padding:1px 4px;border-radius:2px;pointer-events:none}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{font:400 12.5px/1.45 var(--mono);margin:10px 12px}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend span{display:inline-flex;align-items:center}
+.legend i{display:inline-block;width:13px;height:13px;margin-right:6px;border-radius:2px;border:1px solid rgba(0,0,0,.15)}
+.legend i.h{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.75) 0 2px,transparent 2px 5px)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{color:var(--muted);display:block}
+table.t tr.go{cursor:pointer}
+table.t tr.go:hover td{background:var(--panel)}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-left:8px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card b{font:600 19px/1.2 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 28px/1.05 var(--display);margin:6px 0 2px}
+.card .big span{color:var(--muted);font:400 13px/1 var(--mono)}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+.pill{display:inline-block;font:500 11px/1 var(--mono);padding:4px 7px;border-radius:999px;border:1px solid var(--border);color:var(--muted);margin-left:4px;vertical-align:2px}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Animals</span><span>World, 2025</span></div>
+<header class="hero">
+  <h1><span class="a">Born</span> here, <span class="b">loved</span> there</h1>
+  <svg class="mark" viewBox="0 0 136 136" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Every dog breed comes from somewhere: a Scottish estate, a Yorkshire mill town, the Paris lace trade, the palaces of China. Most are now loved somewhere else entirely. This is a map of where the world's breeds were born, set against where people register, buy and read about them today.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: Wikidata; FCI breeds nomenclature; kennel club registration figures; Wikimedia pageviews; Natural Earth</div>
+
+<div class="stats">
+  <div><b>{{meta.n_study|int}}</b><span>dog breeds mapped to a country of origin</span></div>
+  <div><b class="c">{{origins.top.0.n|int}}</b><span>bred in {{origins.top.0.name}}, more than any other country</span></div>
+  <div><b class="h">{{clubs.n_top_abroad|int}} of {{meta.n_clubs|int}}</b><span>kennel clubs whose number one breed was born in another country</span></div>
+  <div><b>{{frenchie.uk_drop|pct}}</b><span>fall in UK French Bulldog registrations from the {{frenchie.uk_peak_year|raw}} peak to 2025</span></div>
+</div>
+
+<p class="lede">Ask a kennel club in Paris for the country's favourite breed and the answer is a dog from the Scottish Highlands. Ask in New York and it is a dog from France. Ask in Tokyo and it is the Poodle, which the international breed register files under France, followed by a dog from Mexico. Dog breeds are one of the most travelled things people have made: almost all of the ones we know were fixed in a handful of countries in the nineteenth and early twentieth centuries, and then exported everywhere.</p>
+<p>I mapped {{meta.n_study|int}} breeds to the country they come from, using the international breed register kept by the Fédération Cynologique Internationale (FCI) where a breed is in it, and Wikidata and Wikipedia where it is not. Then I collected the latest published registration figures from {{meta.n_clubs|int}} national kennel clubs, and, for countries without open figures, a clearly labelled stand-in: how often people read each breed's Wikipedia article in their own language over the last year.</p>
+
+<h2><span class="n">01 · Where breeds are born</span>A world map of dog breeds</h2>
+<p>Countries are shaded by how many breeds come from them. Britain leads with {{origins.top.0.n|int}}, then {{origins.top.1.name}} ({{origins.top.1.n|int}}), {{origins.top.2.name}} ({{origins.top.2.n|int}}), {{origins.top.3.name}} ({{origins.top.3.n|int}}) and {{origins.top.4.name}} ({{origins.top.4.n|int}}). Europe as a whole accounts for {{origins.europe_share|pct}} of the breeds on the map. Click a country to list its breeds. Use <b>UK detail</b> to zoom into Britain, where {{uk.n_points|int}} breeds can be pinned to a county, valley or estate.</p>
+<div class="bleed">
+<div class="controls" role="group" aria-label="Origin map controls">
+  <span class="ctl-l">Breeds</span>
+  <div class="seg" id="oSet"><button class="btn" data-s="all" aria-pressed="true">All {{meta.n_study|int}}</button><button class="btn" data-s="fci">FCI recognised ({{meta.n_fci_study|int}})</button></div>
+  <button class="btn" id="ukBtn">UK detail</button>
+  <button class="btn" id="worldBtn">Whole world</button>
+</div>
+<div class="mapgrid">
+  <div><div id="omap" class="lmap" role="application" aria-label="World map of where dog breeds come from"></div>
+    <div class="legend" id="oLegend"></div></div>
+  <div class="side" id="oSide"></div>
+</div>
+<p class="src">Origin: FCI country of origin for FCI-recognised breeds; otherwise Wikidata (country of origin) and then the English Wikipedia infobox. Historical places are mapped to today's country (England, Scotland and Wales to the UK, Tibet to China, the German Empire to Germany). UK points: hand-checked from English Wikipedia, located with OS Open Names or county boundaries. Outlines: Natural Earth. Base map tiles © Esri.</p>
+</div>
+
+<h2><span class="n">02 · Where breeds are loved</span>Each country's favourite, coloured by where it was born</h2>
+<p>Now each country is coloured by its most popular breed, and the colour says where that breed comes from. Blue is a British breed, red a French one, gold a German one. Solid colour means a kennel club's own registration figures; striped colour means my Wikipedia stand-in, where no club publishes open figures. Click a country for its top breeds and where each was born.</p>
+<div class="bleed">
+<div class="controls" role="group" aria-label="Popularity map controls">
+  <span class="ctl-l">Show</span>
+  <div class="seg" id="pSet"><button class="btn" data-s="all" aria-pressed="true">Clubs and stand-in</button><button class="btn" data-s="club">Kennel clubs only</button><button class="btn" data-s="single">Plus single-country languages</button></div>
+</div>
+<div class="mapgrid">
+  <div><div id="pmap" class="lmap" role="application" aria-label="World map of each country's most popular dog breed, coloured by the breed's country of origin"></div>
+    <div class="legend" id="pLegend"></div></div>
+  <div class="side" id="pSide"></div>
+</div>
+<p class="src">Kennel clubs (solid): {{clubs.list|raw}}. Stand-in (striped): user pageviews of breed articles in each country's main Wikipedia language, 12 months to September 2026; editions shared by several countries (Spanish, Portuguese, Arabic, Russian, German, French, Chinese, Serbian, English) give the same answer for each of them. Base map tiles © Esri.</p>
+</div>
+
+<h2><span class="n">03 · Born here, loved there</span>The great dog export</h2>
+<p>Of the {{meta.n_clubs|int}} kennel clubs, {{clubs.n_top_abroad|int}} have a number one breed that was born in another country, and {{clubs.n_top_gbr|int}} of those {{clubs.n_top_abroad|int}} are British breeds. Only {{clubs.home_top_list|raw}} put a home-grown dog first. Across the top ten breeds of every club, {{clubs.top10_abroad_share|pct}} were bred abroad.</p>
+<div class="figure">
+  <p class="fig-h">Where each kennel club's top ten were born</p>
+  <p class="fig-sub">Each row is a club; each square is one of its ten most registered breeds, in order, coloured by the breed's country of origin. Outlined squares are home-grown.</p>
+  <div class="chart" id="top10chart"></div>
+  <div class="legend" id="t10Legend"></div>
+</div>
+<div class="cards" id="storyCards"></div>
+
+<h3>The French Bulldog: from Paris to the top of America</h3>
+<p>The French Bulldog is the clearest case. It is a French breed, but it is the American Kennel Club's number one for the {{frenchie.akc_years_top|raw}} year in a row, the Japan Kennel Club's number {{frenchie.jkc_rank|int}} ({{frenchie.jkc_count|int}} dogs in 2025), and in Britain it briefly overtook the Labrador: {{frenchie.uk_2018|int}} registrations in 2018 against {{frenchie.lab_2018|int}} Labradors. It is not in the French top three. In Germany, the VDH's member clubs bred only {{frenchie.vdh_2025|int}} French Bulldog puppies in 2025, a reminder that club figures count pedigree breeding, not every dog. Britain's boom has also ended: from {{frenchie.uk_peak|int}} in {{frenchie.uk_peak_year|raw}} to {{frenchie.uk_2025|int}} in 2025.</p>
+<div class="figure">
+  <p class="fig-h">The rise and fall of the French Bulldog in Britain</p>
+  <p class="fig-sub">Royal Kennel Club registrations a year, 2016 to 2025, for the breeds that were in the top five in any year (varieties added together).</p>
+  <div class="chart" id="ukTrend"></div>
+</div>
+
+<h2><span class="n">04 · Home and away</span>How much of each country's dog population is home-grown?</h2>
+<p>Where a club publishes counts for every breed, I can add up the share of all registrations that are breeds from that country. Britain is the most self-sufficient: {{clubs.home.GBR|pct}} of Royal Kennel Club registrations in 2025 were British breeds. Germany's VDH clubs bred {{clubs.home.DEU|pct}} German breeds. In Australia, home-grown breeds were {{clubs.home.AUS|pct}}, and in Japan {{clubs.home.JPN|pct}}: the Japan Kennel Club's registers are dominated by small European and Mexican dogs.</p>
+<div class="figure">
+  <p class="fig-h">Registrations by the breed's country of origin</p>
+  <p class="fig-sub">Share of all registrations in 2025 (VDH: puppies bred by member clubs). Clubs that publish counts for every breed.</p>
+  <div class="chart" id="homeChart"></div>
+</div>
+
+<h2><span class="n">05 · The stand-in</span>What Wikipedia reading can and cannot tell us</h2>
+<p>Most countries do not publish open breed registrations, so for them I used a proxy: the breed whose Wikipedia article was read most in the country's main language over the twelve months to September 2026. This measures curiosity, not ownership. It can be tested where both exist. {{proxy.check_text|raw}}</p>
+<p>Two patterns stand out. The Cane Corso, an Italian mastiff breed, is the most read breed in {{proxy.cane_n|int}} of the {{meta.n_langs|int}} editions, English included ({{proxy.en_top_views|int}} views in twelve months), far ahead of its place in any registration table. And several editions read most about their own national breed: {{proxy.home_editions_text|raw}}.</p>
+<div class="tablewrap"><table class="t" id="langTable"></table></div>
+<p class="src">Pageviews: daily user views over the 60 days to 28 October 2026 (MediaWiki PageViewInfo) to pick each edition's four most read breed articles, then monthly user views October 2025 to September 2026 for those four (Wikimedia REST API). Candidates: the 200 breeds with the most Wikipedia language editions, plus the Pomeranian.</p>
+
+<h2><span class="n">06 · Arguments about origins</span>When the registers disagree</h2>
+<p>A breed's country of origin is not always settled. The FCI assigns each breed one country (sometimes with a "country of patronage" that looks after its standard), and Wikidata often lists several. For {{origins.n_compared|int}} breeds that have both, they share no country at all for {{origins.n_disagree|int}}, and Wikidata lists extra countries for {{origins.n_extra|int}} more. The Jack Russell Terrier is British by origin but the FCI records Australia as the country where it was developed; the Shih Tzu and Lhasa Apso are filed under Tibet (China) with Britain as patron.</p>
+<div class="tablewrap"><table class="t" id="disTable"></table></div>
+
+<div class="note">
+<h3>Method and caveats</h3>
+<p><b>Breeds.</b> Wikidata items that are instances of dog breed (Q39367 or a subclass), {{meta.n_wd|int}} items retrieved on 28 October 2026, joined to the FCI nomenclature ({{meta.n_fci|int}} breeds, definitive and provisional) by FCI number or name. I kept breeds that the FCI recognises or that have an English Wikipedia article, and dropped crossbreeds, lists, duplicates and extinct breeds, leaving {{meta.n_study|int}}. Wikidata coverage is uneven: national and regional breeds from countries with active editors (Spain, Russia, the United States) are better covered than breeds from Africa or South Asia, so counts by country partly reflect who documents breeds.</p>
+<p><b>Origin.</b> For FCI breeds I used the FCI's country of origin ({{origins.src_fci|int}} breeds), otherwise Wikidata's country of origin ({{origins.src_wd|int}}) or the English Wikipedia infobox ({{origins.src_wp|int}}). Where a breed has two origin countries I map the first listed. "Origin" means where the modern breed was fixed, which is often not where its ancestors came from: the Labrador was developed in Britain from dogs of Newfoundland.</p>
+<p><b>Registrations.</b> Each club counts something slightly different: the Royal Kennel Club, the Japan Kennel Club, Dogs Australia and the Swedish club count registrations; the VDH counts puppies bred by its member clubs; the French figures are births entered in the LOF. Clubs that list varieties separately (the six Dachshunds and three Poodles of the Royal Kennel Club, for example) are added together here, which is why the Dachshund is third in Britain. The AKC and Canadian club publish ranks, not counts. France, Canada, Norway and Finland come from press releases or press reports of club figures and cover only the top few breeds; Finland's are for 2024. Registered pedigree dogs are a minority of all dogs, and the gap varies by breed and country.</p>
+<p><b>Stand-in.</b> Wikipedia pageviews by language are mapped to countries where that language is the main one. Shared editions give one answer for many countries and are striped more lightly on request. Pageviews follow news and novelty, and readers of a language are not all in one place.</p>
+<p><b>Not covered.</b> Mixed-breed and non-pedigree dogs, which are most dogs in most countries; dogs registered with other bodies (for example the United Kennel Club); and the many countries with neither open club figures nor a single main Wikipedia language.</p>
+</div>
+
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23748254">Read the paper</a><a href="https://github.com/Tristan-Hotham/dog-breeds">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/28/dog-breeds/">Blog post</a></div>
+
+<details><summary>Sources and licences</summary>
+<p class="src">Breeds: Wikidata (CC0), queried through QLever (University of Freiburg) and the Wikidata API, 28 October 2026. FCI breeds nomenclature, Fédération Cynologique Internationale, https://www.fci.be/en/nomenclature/ (factual fields: group, country of origin, patronage). English Wikipedia breed articles (CC BY-SA 4.0) for infobox origins and the UK birthplace sentences. Registrations: Royal Kennel Club breed registration statistics 2016 to 2025; American Kennel Club, Most popular dog breeds of 2025; VDH Welpenstatistik 2011 to 2025; Japan Kennel Club 犬種別犬籍登録頭数 2025; Dogs Australia national registration analysis 2018 to 2025; Svenska Kennelklubben press release of 13 January 2026; Norsk Kennel Klub press release of 15 January 2026; Canadian Kennel Club top ten for 2025 as reported by The Canadian Press; Société Centrale Canine 2025 figures as reported by Breizh-Info; Suomen Kennelliitto 2024 figures as reported by Verkkouutiset. Registration numbers are used as facts with credit; no text is reproduced. Pageviews: Wikimedia Foundation pageviews (CC0). Outlines: Natural Earth (public domain). UK places: OS Open Names (Open Government Licence v3.0, contains OS data © Crown copyright and database right 2026); county boundaries from ONS (OGL v3.0). City labels: GeoNames (CC BY 4.0). Base map tiles © Esri.</p>
+</details>
+
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Born here, loved there: where dog breeds come from and where they are loved. https://doi.org/10.5281/zenodo.23748254</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Text and figures: CC BY-SA 4.0. Code: MIT. Derived data: CC BY-SA 4.0, with the credits above. Other studies: <a href="https://maps.tristanhotham.com/country-names/">What the world calls each other</a>, <a href="https://maps.tristanhotham.com/sun-and-rain/">Sun and rain</a>, <a href="https://blog.tristanhotham.com/">all posts</a>.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const R = /*RESULTS*/;
+const SITE = /*SITE*/;
+const WORLD = /*WORLD*/;
+const CITIES = /*CITIES*/;
+const fmt = n => n == null || n === "" ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+document.addEventListener("click", hideTip);
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const redraws = [];
+function resp(box, render) { let last = 0; const go = force => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const CN = iso => (SITE.cname[iso] || iso);
+const OC = SITE.origin_colours;              // origin country -> colour
+const ocol = iso => OC[iso] || OC.other;
+
+/* hero mark: a sitting dog drawn from simple shapes, tinted with the three leading origin colours */
+(function () {
+  const g = document.getElementById("heroMark");
+  const c1 = ocol("GBR"), c2 = ocol("FRA"), c3 = ocol("DEU");
+  el("circle", { cx: 68, cy: 68, r: 64, fill: "none", stroke: c1, "stroke-width": 6 }, g);
+  el("path", { d: "M44 112 C40 90 44 70 58 60 L56 40 C56 30 62 24 70 24 C80 24 86 30 88 38 L100 42 C104 44 104 50 100 52 L88 54 C88 62 92 70 94 80 C98 92 98 104 94 112 Z", fill: c2 }, g);
+  el("path", { d: "M62 30 C56 22 50 22 48 30 C47 36 52 42 58 44 Z", fill: c3 }, g);
+  el("circle", { cx: 76, cy: 36, r: 3, fill: "#fff" }, g);
+  el("path", { d: "M94 104 C106 104 112 96 112 88", fill: "none", stroke: c2, "stroke-width": 6, "stroke-linecap": "round" }, g);
+})();
+
+/* ---------- shared map machinery: base tiles, hills, labels, our place names, borders, colour strength ---------- */
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const ESRI_ATT = 'Tiles &copy; Esri, HERE, Garmin, USGS, NGA, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community';
+const LYDEF = { base: "plain", hills: true, hillK: 55, labels: false, labelK: 80, names: true, nameLvl: 1, borders: true, colour: 85 };
+function makeMap(id, key, opts) {
+  const LY = { ...LYDEF, ...(opts.ly || {}) };
+  try { Object.assign(LY, JSON.parse(localStorage.getItem(key) || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem(key, JSON.stringify(LY)); } catch (e) {} };
+  const map = L.map(id, { minZoom: 1, maxZoom: 10, worldCopyJump: false, maxBounds: [[-75, -200], [86, 200]], zoomSnap: .5 }).setView(opts.view || [30, 10], opts.zoom || 2);
+  map.createPane("hills"); map.getPane("hills").style.zIndex = 250; map.getPane("hills").style.pointerEvents = "none";
+  map.createPane("fill"); map.getPane("fill").style.zIndex = 400;
+  map.createPane("labels"); map.getPane("labels").style.zIndex = 450; map.getPane("labels").style.pointerEvents = "none";
+  map.createPane("names"); map.getPane("names").style.zIndex = 620; map.getPane("names").style.pointerEvents = "none";
+  const M = { map, LY, base: null, hills: null, labels: null, names: L.layerGroup(), layer: null, extra: [] };
+  M.setTiles = () => {
+    [M.base, M.labels, M.hills].forEach(l => { if (l) map.removeLayer(l); });
+    const t = isDark() ? "Dark" : "Light";
+    const url = LY.base === "relief" ? ESRI + "World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}" : LY.base === "satellite" ? ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}" : `${ESRI}Canvas/World_${t}_Gray_Base/MapServer/tile/{z}/{y}/{x}`;
+    M.base = L.tileLayer(url, { maxZoom: 16, maxNativeZoom: LY.base === "relief" ? 13 : 16, attribution: ESRI_ATT }).addTo(map);
+    M.hills = L.tileLayer(ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16, maxNativeZoom: 16, pane: "hills" });
+    M.labels = L.tileLayer(`${ESRI}Canvas/World_${t}_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 16, pane: "labels" });
+    M.apply();
+  };
+  M.apply = () => {
+    if (!M.base) return;
+    if (LY.hills) { M.hills.addTo(map); M.hills.setOpacity(Math.min(1, .15 + LY.hillK / 120)); } else map.removeLayer(M.hills);
+    if (LY.labels) { M.labels.addTo(map); M.labels.setOpacity(LY.labelK / 100); } else map.removeLayer(M.labels);
+    if (LY.names) M.names.addTo(map); else map.removeLayer(M.names);
+    if (M.layer) M.layer.setStyle(f => M.style(f));
+    M.placeNames(); M.extra.forEach(f => f());
+  };
+  M.placeNames = () => {
+    M.names.clearLayers(); if (!LY.names) return;
+    const z = map.getZoom(), bb = map.getBounds().pad(.05);
+    const minPop = [[2, 8e6], [3, 3e6], [4, 1e6], [5, 4e5], [6, 1.5e5], [99, 5e4]].find(([zz]) => z < zz + (LY.nameLvl === 2 ? 1.5 : LY.nameLvl === 0 ? -1 : 0))[1] * (LY.nameLvl === 0 ? 2 : 1);
+    const vis = CITIES.filter(c => c.pop >= minPop && bb.contains([c.lat, c.lon]));
+    const boxes = []; let n = 0;
+    for (const c of vis) {
+      const pt = map.latLngToContainerPoint([c.lat, c.lon]), big = c.pop >= 5e6;
+      const bx = [pt.x - 4, pt.y - 8, pt.x + 10 + c.name.length * (big ? 6.9 : 6.3), pt.y + 7];
+      if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+      boxes.push(bx); L.marker([c.lat, c.lon], { pane: "names", interactive: false, keyboard: false, icon: L.divIcon({ className: "cityL" + (big ? "" : " s"), html: `<i></i>${esc(c.name)}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(M.names);
+      if (++n >= 140) break;
+    }
+  };
+  map.on("zoomend moveend", M.placeNames);
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false">Map layers</button>
+<div class="lyrPanel" hidden>
+ <div class="row"><label style="font-weight:600">Base map</label><div class="sub"><select data-k="base" aria-label="Base map"><option value="plain">Plain grey</option><option value="relief">Shaded relief</option><option value="satellite">Satellite</option></select></div></div>
+ <div class="row"><label><input type="checkbox" data-k="hills"> Hills and mountains</label><div class="sub"><span>strength</span><input type="range" data-k="hillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="labels"> Map labels</label><div class="sub"><span>strength</span><input type="range" data-k="labelK" min="20" max="100" step="5" aria-label="Map label strength"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="names"> Bold city names</label><div class="sub"><span>how many</span><select data-k="nameLvl" aria-label="How many city names"><option value="0">Biggest only</option><option value="1">Some</option><option value="2">Lots</option></select></div></div>
+ <div class="row"><label><input type="checkbox" data-k="borders"> Country borders</label></div>
+ <div class="row"><label style="font-weight:600">Colour</label><div class="sub"><span>strength</span><input type="range" data-k="colour" min="20" max="100" step="5" aria-label="Colour strength"></div></div>
+ <button class="reset">Reset layers</button>
+</div>`;
+    return d; } });
+  map.addControl(new Ctl());
+  const box = map.getContainer(), btn = box.querySelector(".lyrBtn"), pan = box.querySelector(".lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => pan.querySelectorAll("[data-k]").forEach(i => { const k = i.dataset.k; if (i.type === "checkbox") i.checked = LY[k]; else i.value = LY[k]; });
+  pan.querySelectorAll("[data-k]").forEach(i => i.addEventListener(i.type === "range" ? "input" : "change", () => {
+    const k = i.dataset.k; LY[k] = i.type === "checkbox" ? i.checked : (i.tagName === "SELECT" && k === "base" ? i.value : +i.value);
+    if (k === "hillK") LY.hills = true; if (k === "labelK") LY.labels = true; if (k === "nameLvl") LY.names = true;
+    sync(); save(); k === "base" ? M.setTiles() : M.apply();
+  }));
+  pan.querySelector(".reset").onclick = () => { Object.assign(LY, LYDEF, opts.ly || {}); save(); sync(); M.setTiles(); };
+  sync();
+  return M;
+}
+function countryLayer(M, styleFn, onClick, tipFn) {
+  M.style = f => { const s = styleFn(f); s.fillOpacity = (s.fillOpacity ?? 1) * M.LY.colour / 100; if (!M.LY.borders) { s.weight = 0; } return s; };
+  M.layer = L.geoJSON(WORLD, { pane: "fill", style: M.style, onEachFeature: (f, l) => {
+    l.on("click", () => onClick(f.properties.iso));
+    l.on("mousemove", e => { const r = M.map.getContainer().getBoundingClientRect(); showTip(tipFn(f.properties.iso), r.left + e.containerPoint.x, r.top + e.containerPoint.y); });
+    l.on("mouseout", hideTip);
+  } }).addTo(M.map);
+}
+/* hatching for stand-in countries, baked into an SVG pattern inside Leaflet's own svg */
+function addHatch(M, id, colour) {
+  const svg = M.map.getPane("fill").querySelector("svg"); if (!svg) return null;
+  let defs = svg.querySelector("defs"); if (!defs) { defs = el("defs", {}); svg.insertBefore(defs, svg.firstChild); }
+  const pid = id + colour.replace("#", "");
+  if (!svg.querySelector("#" + pid)) {
+    const p = el("pattern", { id: pid, patternUnits: "userSpaceOnUse", width: 7, height: 7, patternTransform: "rotate(45)" }, defs);
+    el("rect", { width: 7, height: 7, fill: colour, "fill-opacity": .45 }, p);
+    el("rect", { width: 3.4, height: 7, fill: colour }, p);
+  }
+  return `url(#${pid})`;
+}
+
+/* ---------- 01 origins map ---------- */
+const OS = { set: "all", sel: "GBR" };
+const oMap = makeMap("omap", "db_origin_layers", { view: [35, 10], zoom: 2 });
+const oCount = iso => { const c = SITE.origins[iso]; if (!c) return 0; return OS.set === "fci" ? c.breeds.filter(b => b[2]).length : c.breeds.length; };
+const OBREAKS = [1, 3, 6, 11, 21, 41];
+function oColour(n) {
+  const ramp = isDark() ? ["#3a3340", "#5a4a5e", "#7b5c6d", "#a26b6a", "#cd7d58", "#f0a05a"] : ["#F1E3CC", "#E8C79B", "#DCA06A", "#C97646", "#A9502E", "#7A3420"];
+  let k = -1; OBREAKS.forEach((b, i) => { if (n >= b) k = i; }); return k < 0 ? null : ramp[k];
+}
+countryLayer(oMap, f => { const n = oCount(f.properties.iso), c = oColour(n); return { color: css("--border") || "#999", weight: f.properties.iso === OS.sel ? 2.4 : .6, fillColor: c || css("--land"), fillOpacity: c ? .95 : .55 }; },
+  iso => { OS.sel = iso; oSide(); oMap.apply(); },
+  iso => `<b>${esc(CN(iso))}</b><br>${oCount(iso)} breed${oCount(iso) === 1 ? "" : "s"} of origin`);
+function oLegend() {
+  const ramp = OBREAKS.map((b, i) => `<span><i style="background:${oColour(b)}"></i>${b}${i < OBREAKS.length - 1 ? " to " + (OBREAKS[i + 1] - 1) : " or more"}</span>`).join("");
+  document.getElementById("oLegend").innerHTML = ramp + `<span><i style="background:#fff;border-color:#222;border-radius:50%"></i>UK birthplace (UK detail)</span>`;
+}
+function oSide() {
+  const c = SITE.origins[OS.sel], box = document.getElementById("oSide");
+  if (!c) { box.innerHTML = `<h4>${esc(CN(OS.sel))}</h4><p class="sub">No breed on the map has this country as its origin.</p>`; return; }
+  const list = c.breeds.filter(b => OS.set === "all" || b[2]);
+  const groups = {}; list.forEach(b => (groups[b[3] || "Not in the FCI register"] = groups[b[3] || "Not in the FCI register"] || []).push(b));
+  let h = `<h4>Country of origin</h4><div class="big">${esc(CN(OS.sel))}</div><p class="sub">${list.length} breed${list.length === 1 ? "" : "s"}${OS.set === "fci" ? " recognised by the FCI" : ""}. ${c.reg ? "Most popular of them at home: " + esc(c.reg) + "." : ""}</p>`;
+  Object.keys(groups).sort().forEach(g => { h += `<h4>${esc(g)}</h4><ul>` + groups[g].map(b => `<li>${esc(b[0])}${b[4] ? ` <small>(${esc(b[4])})</small>` : ""}${b[5] ? ` <small>· ${esc(b[5])}</small>` : ""}</li>`).join("") + "</ul>"; });
+  box.innerHTML = h;
+}
+/* UK detail: breed birthplaces */
+const ukLayer = L.layerGroup();
+function ukDraw() {
+  ukLayer.clearLayers();
+  const z = oMap.map.getZoom(); if (z < 4.5) { oMap.map.removeLayer(ukLayer); return; }
+  ukLayer.addTo(oMap.map);
+  const boxes = [], pts = SITE.uk.points.slice().sort((a, b) => b.lat - a.lat);
+  pts.forEach(p => {
+    const m = L.circleMarker([p.lat, p.lon], { pane: "names", radius: 6, color: "#22201C", weight: 2, fillColor: "#fff", fillOpacity: 1, interactive: true }).addTo(ukLayer);
+    m.bindPopup(`<b>${esc(p.breed)}</b><br>${esc(p.place)}<br><small>“${esc(p.evidence)}” (English Wikipedia)</small>${p.reg_2025 !== "" ? `<br>Royal Kennel Club registrations: ${fmt(p.reg_2016)} in 2016, ${fmt(p.reg_2025)} in 2025` : ""}<br><small>Marker: ${esc(p.location_from)}</small>`);
+    m.on("mouseover", () => m.openPopup());
+    boxes.push([...[0, 1].map(() => 0)].length ? (() => { const c = oMap.map.latLngToContainerPoint([p.lat, p.lon]); return [c.x - 7, c.y - 7, c.x + 7, c.y + 7]; })() : null);
+  });
+  if (z < 5) return;
+  const w = p => p.breed.length * 6.7 + 8;
+  pts.forEach(p => {
+    const c = oMap.map.latLngToContainerPoint([p.lat, p.lon]);
+    const cands = [[10, -7], [-10 - w(p), -7], [10, 6], [-10 - w(p), 6], [10, -20], [-10 - w(p), -20], [10, 19]];
+    for (const [dx, dy] of cands) {
+      const bx = [c.x + dx, c.y + dy, c.x + dx + w(p), c.y + dy + 14];
+      if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+      boxes.push(bx);
+      L.marker([p.lat, p.lon], { pane: "names", interactive: false, icon: L.divIcon({ className: "ukL", html: esc(p.breed), iconSize: null, iconAnchor: [-dx, -dy] }) }).addTo(ukLayer);
+      break;
+    }
+  });
+}
+oMap.map.getPane("names").style.pointerEvents = "auto";
+oMap.extra.push(ukDraw); oMap.map.on("zoomend", ukDraw);
+document.getElementById("ukBtn").onclick = () => { OS.sel = "GBR"; oSide(); oMap.map.flyToBounds([[50.0, -6.6], [60.3, 1.8]], { duration: .8 }); oMap.apply(); };
+document.getElementById("worldBtn").onclick = () => oMap.map.flyTo([35, 10], 2, { duration: .8 });
+document.querySelectorAll("#oSet .btn").forEach(b => b.onclick = () => { OS.set = b.dataset.s; document.querySelectorAll("#oSet .btn").forEach(x => x.setAttribute("aria-pressed", x === b)); oMap.apply(); oSide(); });
+oLegend(); oSide();
+
+/* ---------- 02 popularity map ---------- */
+const PS = { set: "all", sel: "USA" };
+const pMap = makeMap("pmap", "db_pop_layers", { view: [35, 10], zoom: 2 });
+const prow = iso => { const r = SITE.pop[iso]; if (!r) return null; if (PS.set === "club" && r.basis !== "club") return null; if (PS.set === "single" && r.basis === "proxy_shared") return null; return r; };
+countryLayer(pMap, f => { const r = prow(f.properties.iso);
+    if (!r) return { color: css("--border") || "#999", weight: .5, fillColor: css("--land"), fillOpacity: .5 };
+    const c = ocol(r.top_origin), sel = f.properties.iso === PS.sel;
+    if (r.basis === "club") return { color: sel ? "#111" : "#fff", weight: sel ? 2.6 : .8, fillColor: c, fillOpacity: 1 };
+    const h = addHatch(pMap, "h", c);
+    return { color: sel ? "#111" : c, weight: sel ? 2.6 : .8, fillColor: h || c, fillOpacity: h ? 1 : .55 };
+  },
+  iso => { PS.sel = iso; pSide(); pMap.apply(); },
+  iso => { const r = SITE.pop[iso]; if (!r) return `<b>${esc(CN(iso))}</b><br>No open figures and no single main Wikipedia language`;
+    return `<b>${esc(CN(iso))}</b><br><i style="background:${ocol(r.top_origin)}"></i>${esc(r.top_breed)}, a breed from ${esc(CN(r.top_origin))}<br><span>${r.basis === "club" ? esc(r.source) + ", " + r.year : esc(r.source) + " (stand-in)"}</span>`; });
+pMap.map.on("zoomend", () => pMap.apply());
+function pLegend() {
+  const used = {}; Object.values(SITE.pop).forEach(r => { const k = OC[r.top_origin] ? r.top_origin : "other"; used[k] = (used[k] || 0) + 1; });
+  const keys = Object.keys(used).sort((a, b) => used[b] - used[a]);
+  document.getElementById("pLegend").innerHTML = keys.map(k => `<span><i style="background:${ocol(k)}"></i>${k === "other" ? "Other origins" : "Breed from " + esc(CN(k))}</span>`).join("") +
+    `<span><i class="h" style="background:#888"></i>Wikipedia stand-in</span>`;
+}
+function pSide() {
+  const r = SITE.pop[PS.sel], box = document.getElementById("pSide");
+  if (!r) { box.innerHTML = `<h4>Most popular breed</h4><div class="big">${esc(CN(PS.sel))}</div><p class="sub">No open kennel club figures that I could find, and no single main language edition of Wikipedia to stand in for them.</p>`; return; }
+  let h = `<h4>Most popular breed</h4><div class="big">${esc(CN(PS.sel))}</div>`;
+  if (r.basis === "club") {
+    h += `<p class="sub">${esc(r.source)}, ${r.year}${r.note ? " (" + esc(r.note) + ")" : ""}.</p><ol>` + r.top10.map(t => `<li><span class="sw" style="background:${ocol(t[1])}"></span>${esc(t[0])} <small>${esc(CN(t[1]))}${t[2] !== "" ? " · " + fmt(t[2]) : ""}</small></li>`).join("") + "</ol>";
+    if (r.home_share !== "") h += `<p class="sub">Home-grown breeds: ${pc(r.home_share)} of registrations.</p>`;
+  } else {
+    const L2 = SITE.langs[r.lang];
+    h += `<p class="sub">Stand-in: ${esc(r.source)}${r.basis === "proxy_shared" ? ", an edition shared with " + (L2.countries.length - 1) + " other countries" : ""}. Most read breed articles over 12 months:</p><ol>` +
+      L2.top.map(t => `<li><span class="sw" style="background:${ocol(t[1])}"></span>${esc(t[0])} <small>${esc(CN(t[1]))} · ${fmt(t[2])} views</small></li>`).join("") + "</ol>";
+  }
+  box.innerHTML = h;
+}
+document.querySelectorAll("#pSet .btn").forEach(b => b.onclick = () => { PS.set = b.dataset.s; document.querySelectorAll("#pSet .btn").forEach(x => x.setAttribute("aria-pressed", x === b)); pMap.apply(); });
+pLegend(); pSide();
+
+/* ---------- 03 top-ten chart ---------- */
+(function () {
+  const rows = SITE.top10;
+  const legend = {};
+  resp(document.getElementById("top10chart"), (W, narrow) => {
+    const host = document.getElementById("top10chart");
+    const lw = narrow ? 92 : 150, sz = Math.min(46, (W - lw - 10) / 10), rh = sz + 8, H = rows.length * rh + 26;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Top ten breeds of each kennel club coloured by country of origin" }, host);
+    for (let k = 0; k < 10; k++) lbl(svg, lw + k * sz + sz / 2, 12, String(k + 1), "lab s m", "middle");
+    rows.forEach((r, i) => {
+      const y = 22 + i * rh;
+      lbl(svg, 0, y + sz / 2 + 4, narrow ? r.iso : CN(r.iso), "lab b");
+      r.t.forEach((t, k) => {
+        legend[t[1]] = 1;
+        const home = t[1] === r.iso;
+        const rc = el("rect", { x: lw + k * sz + 1, y, width: sz - 3, height: sz - 3, rx: 3, fill: ocol(t[1]), stroke: home ? css("--fg") : "none", "stroke-width": home ? 2.5 : 0 }, svg);
+        rc.addEventListener("mousemove", e => showTip(`<b>${esc(CN(r.iso))} #${k + 1}</b><br><i style="background:${ocol(t[1])}"></i>${esc(t[0])}<br>bred in ${esc(CN(t[1]))}${t[2] !== "" ? "<br>" + fmt(t[2]) + " registrations" : ""}`, e.pageX - scrollX, e.pageY - scrollY));
+        rc.addEventListener("mouseout", hideTip);
+        if (sz > 30 && !narrow) { const ab = t[0].split(/[ -]/).map(w => w[0]).join("").slice(0, 3); const tx = lbl(svg, lw + k * sz + sz / 2 - 1, y + sz / 2 + 3, ab, "lab s", "middle"); tx.style.fill = "#fff"; tx.style.pointerEvents = "none"; }
+      });
+    });
+    const keys = Object.keys(legend).map(k => OC[k] ? k : "other").filter((v, i, a) => a.indexOf(v) === i);
+    document.getElementById("t10Legend").innerHTML = keys.map(k => `<span><i style="background:${ocol(k)}"></i>${k === "other" ? "Other" : esc(CN(k))}</span>`).join("") + `<span><i style="background:transparent;border:2.5px solid var(--fg)"></i>home-grown</span>`;
+  });
+})();
+/* story cards */
+document.getElementById("storyCards").innerHTML = SITE.stories.map(s => `<div class="card" style="border-left-color:${ocol(s.origin)}"><b>${esc(s.breed)}</b>Bred in ${esc(s.from)}<div class="big">${esc(s.big)} <span>${esc(s.bigl)}</span></div>${esc(s.text)}</div>`).join("");
+
+/* ---------- UK trend chart ---------- */
+(function () {
+  const T = SITE.uk.trend, ys = T.years;
+  resp(document.getElementById("ukTrend"), (W, narrow) => {
+    const host = document.getElementById("ukTrend"), H = narrow ? 300 : 340, ml = 52, mr = narrow ? 92 : 170, mt = 10, mb = 26;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "UK registrations 2016 to 2025 for leading breeds" }, host);
+    const max = Math.max(...T.series.flatMap(s => s.v)), X = i => ml + i * (W - ml - mr) / (ys.length - 1), Y = v => mt + (H - mt - mb) * (1 - v / max);
+    for (let v = 0; v <= max; v += 10000) { el("line", { x1: ml, x2: W - mr, y1: Y(v), y2: Y(v), stroke: css("--rule") }, svg); lbl(svg, ml - 6, Y(v) + 4, v ? (v / 1000) + "k" : "0", "lab s m", "end"); }
+    ys.forEach((y, i) => { if (!narrow || i % 3 === 0 || i === ys.length - 1) lbl(svg, X(i), H - 6, String(y), "lab s m", "middle"); });
+    const placed = [];
+    T.series.forEach(s => {
+      const c = ocol(s.o), fr = s.n === "French Bulldog";
+      el("polyline", { points: s.v.map((v, i) => X(i) + "," + Y(v)).join(" "), fill: "none", stroke: c, "stroke-width": fr ? 4 : 2.2, "stroke-linejoin": "round", opacity: fr ? 1 : .85 }, svg);
+      s.v.forEach((v, i) => { const d = el("circle", { cx: X(i), cy: Y(v), r: fr ? 4 : 2.5, fill: c }, svg); d.addEventListener("mousemove", e => showTip(`<b>${esc(s.n)}</b>, ${ys[i]}<br>${fmt(v)} registrations`, e.pageX - scrollX, e.pageY - scrollY)); d.addEventListener("mouseout", hideTip); });
+      let ly = Y(s.v[s.v.length - 1]) + 4; while (placed.some(p => Math.abs(p - ly) < 13)) ly += 13; placed.push(ly);
+      const t = lbl(svg, W - mr + 6, ly, narrow ? s.n.split(" ")[0] : s.n, "lab s b"); t.style.fill = c;
+    });
+  });
+})();
+
+/* ---------- 04 home-grown chart ---------- */
+(function () {
+  const rows = SITE.home;
+  resp(document.getElementById("homeChart"), (W, narrow) => {
+    const host = document.getElementById("homeChart"), lw = narrow ? 96 : 170, bh = 30, H = rows.length * (bh + 14) + 10;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of registrations by breed origin" }, host);
+    rows.forEach((r, i) => {
+      const y = 4 + i * (bh + 14); let x = lw; const w = W - lw - 4;
+      lbl(svg, 0, y + bh / 2 + 4, narrow ? r.iso : CN(r.iso), "lab b");
+      r.parts.forEach(p => {
+        const pw = p[1] * w; const c = p[0] === "other" ? css("--border") : ocol(p[0]);
+        const rc = el("rect", { x, y, width: Math.max(0, pw - 1), height: bh, fill: c, stroke: p[0] === r.iso ? css("--fg") : "none", "stroke-width": 2 }, svg);
+        rc.addEventListener("mousemove", e => showTip(`<b>${esc(CN(r.iso))}</b><br><i style="background:${c}"></i>${p[0] === "other" ? "breeds from other countries" : "breeds from " + esc(CN(p[0]))}: ${pc(p[1], 1)}`, e.pageX - scrollX, e.pageY - scrollY));
+        rc.addEventListener("mouseout", hideTip);
+        if (pw > 46) { const t = lbl(svg, x + 5, y + bh / 2 + 4, (narrow ? "" : (p[0] === "other" ? "other " : p[0] + " ")) + pc(p[1]), "lab s b"); t.style.fill = p[0] === "other" ? css("--fg") : "#fff"; t.style.pointerEvents = "none"; }
+        x += pw;
+      });
+    });
+  });
+})();
+
+/* ---------- 05 language table ---------- */
+(function () {
+  const t = document.getElementById("langTable");
+  const rows = Object.entries(SITE.langs).sort((a, b) => a[1].name.localeCompare(b[1].name));
+  t.innerHTML = `<thead><tr><th>Wikipedia</th><th>Most read breed</th><th class="wide">Bred in</th><th class="num">Views, 12 months</th><th class="wide">Stands in for</th></tr></thead><tbody>` +
+    rows.map(([l, r]) => `<tr><td>${esc(r.name)}</td><td><span class="sw" style="background:${ocol(r.top[0][1])}"></span>${esc(r.top[0][0])}</td><td class="wide">${esc(CN(r.top[0][1]))}</td><td class="num">${fmt(r.top[0][2])}</td><td class="wide"><small>${r.countries.length ? r.countries.map(CN).map(esc).join(", ") : "(not mapped)"}</small></td></tr>`).join("") + "</tbody>";
+})();
+/* ---------- 06 disagreements ---------- */
+document.getElementById("disTable").innerHTML = `<thead><tr><th>Breed</th><th>FCI country of origin</th><th>Wikidata</th></tr></thead><tbody>` +
+  SITE.disagree.map(d => `<tr><td>${esc(d[0])}</td><td>${esc(d[1])}${d[2] ? `<small>${esc(d[2])}</small>` : ""}</td><td>${esc(d[3])}</td></tr>`).join("") + "</tbody>";
+
+oMap.setTiles(); pMap.setTiles();
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; oMap.setTiles(); pMap.setTiles(); oLegend(); redraws.forEach(f => f()); };
+</script>
+</body>
+</html>

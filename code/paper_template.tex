@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Born Here, Loved There: Where Dog Breeds Come From and Where They Are Loved},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Born Here, Loved There: Where Dog Breeds Come From\\[2pt] and Where They Are Loved\par}
+\vspace{0.4em}
+{\large Breed origins from Wikidata and the FCI set against kennel club registrations in {{meta.n_clubs|int}} countries\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23748254}{https://doi.org/10.5281/zenodo.23748254}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Most of the dog breeds people know were fixed in a few countries in the nineteenth and early twentieth centuries and then spread across the world. I map {{meta.n_study|int}} breeds to a present-day country of origin, using the Fédération Cynologique Internationale (FCI) nomenclature where a breed is recognised by it and Wikidata or English Wikipedia where it is not, and set them against the latest open registration figures of {{meta.n_clubs|int}} national kennel clubs. For countries without open figures I use a clearly labelled proxy: the breed article read most in the country's main Wikipedia language over twelve months. Britain is the origin of more breeds than any other country ({{origins.top.0.n|int}}), followed by France ({{origins.top.1.n|int}}) and the United States ({{origins.top.2.n|int}}); Europe accounts for {{origins.europe_share|pct}} of the breeds mapped. The number one breed was born in another country for {{clubs.n_top_abroad|int}} of the {{meta.n_clubs|int}} clubs, and {{clubs.n_top_gbr|int}} of those are British breeds; across the clubs' top tens, {{clubs.top10_abroad_share|pct}} of places go to imported breeds. Home-grown breeds make up {{clubs.home.GBR|pct}} of Royal Kennel Club registrations but {{clubs.home.JPN|pct}} of the Japan Kennel Club's. The French Bulldog, a French breed, tops the American Kennel Club ranking and briefly outnumbered the Labrador in Britain in 2018 before British registrations fell by {{frenchie.uk_drop|pct}} from their {{frenchie.uk_peak_year|raw}} peak. The Wikipedia proxy agrees poorly with club figures where both exist and should be read as a measure of curiosity rather than ownership.
+
+\textbf{Keywords:} dog breeds; kennel clubs; registrations; Wikidata; FCI; Wikipedia pageviews; cultural diffusion; popularity; French Bulldog
+\end{quote}
+
+\section{Introduction}
+A dog breed is a population of dogs bred to a written standard and kept closed by a stud book. Most of the breeds recognised today were formalised between the 1860s and the 1930s, when kennel clubs in Britain, France, Germany and the United States began to hold shows and register pedigrees, and genetic work confirms that modern breeds are recent, closed populations with distinct geographic histories \citep{parker2004,parker2017}. Breeds are therefore unusually well documented cultural products: each one has, by convention, a country of origin, and many have a place, an estate or a person attached to their story.
+
+They have also travelled. The Labrador Retriever, developed in Britain from water dogs brought from Newfoundland, has been the most registered breed in several countries for decades. The French Bulldog has spread from Paris to the top of the American Kennel Club's list. Popularity itself moves in fashions \citep{herzog2004,ghirlanda2013}. This study asks a simple descriptive question: where were the world's breeds born, and where are they loved now? I answer it with open data, and I try to be clear about how far each source can be trusted.
+
+\section{Data}
+\subsection{Breeds and their origins}
+I retrieved from Wikidata \citep{wikidata} all {{meta.n_wd|int}} items that are instances of \emph{dog breed} (Q39367) or a subclass, with their country of origin (P495), FCI breed number, English labels, sitelinks and classes, on 28 October 2026, through the QLever endpoint and the Wikidata API. I scraped the FCI breeds nomenclature \citep{fci}, one page per breed, for its {{meta.n_fci|int}} breeds recognised on a definitive or provisional basis: group, section, country of origin, country of patronage and country of development where given. I joined the two by FCI number, then by name, then by a short list of hand matches, and read the \emph{country} field of each breed's English Wikipedia infobox.
+
+The study set contains breeds that the FCI recognises or that have an English Wikipedia article, excluding crossbreeds, lists, duplicates and breeds marked as extinct: {{meta.n_study|int}} breeds. Origin is the FCI country of origin for FCI breeds ({{origins.src_fci|int}}), otherwise Wikidata's country of origin ({{origins.src_wd|int}}), otherwise the infobox ({{origins.src_wp|int}}). Historical or sub-national origins are mapped to today's country: England, Scotland and Wales to the United Kingdom, Tibet to China, the German Empire to Germany, the Soviet Union to Russia and Czechoslovakia to Czechia. Where a breed has more than one origin I keep the first.
+
+\subsection{Popularity: kennel club registrations}
+I collected the most recent open breed figures from national kennel clubs (Table~\ref{tab:clubs}). The Royal Kennel Club publishes a ten-year table of registrations by breed \citep{rkc}; Dogs Australia an eight-year table \citep{ankc}; the VDH a table of puppies bred by its member clubs from 2011 \citep{vdh}; the Japan Kennel Club a ranked table for 2025 \citep{jkc}; the American Kennel Club a ranking of 202 breeds without counts \citep{akc}. For Sweden I used the top 20 published in the Swedish Kennel Club's press release \citep{skk}, for Norway the top three named in the Norwegian Kennel Club's release \citep{nkk}, for Canada the top ten reported by The Canadian Press \citep{cp}, for France the top three reported from the Société Centrale Canine's figures \citep{breizh} and for Finland the 2024 top three reported from the Finnish Kennel Club \citep{verkko}. I transcribed numbers only.
+
+Club names were matched to the breed table through Wikidata labels and Wikipedia titles in English, German, Swedish, Finnish, Norwegian, French and Japanese, with hand matches for club conventions such as ``Retriever (Labrador)''. Varieties that a club lists separately, such as the six Dachshunds and three Poodles of the Royal Kennel Club, are added together. Unmatched names account for at most 0.2\% of any club's counted registrations.
+
+\subsection{Popularity elsewhere: Wikipedia pageviews}
+Most countries publish no open breed figures. As a proxy, I took the 200 dog breeds with the most Wikipedia language editions, plus the Pomeranian, which Wikidata types as a variety rather than a breed. For each of {{meta.n_langs|int}} language editions I fetched daily user pageviews of each breed article over the 60 days to 28 October 2026 \citep{pageviews}, and for the four most read breeds in each edition the monthly user pageviews from October 2025 to September 2026. The 12-month figure decides each edition's top breed. Each edition is then assigned to the countries where its language is the main one; editions shared by several countries (Spanish, Portuguese, Arabic, Russian, German, French, Chinese, Serbian and English) give the same answer for each.
+
+\section{Methods}
+The analysis is descriptive. For each country of origin I count breeds. For each club I record its number one breed and that breed's origin, the origins of its top ten, and, where every breed is counted, the share of registrations that belong to home-grown breeds. For the United Kingdom I add a regional layer: for {{uk.n_points|int}} native breeds whose English Wikipedia article names a county, valley, town or estate of origin, I placed a marker at that place using OS Open Names \citep{osnames} or the centroid of the county boundary, and kept the sentence used as evidence. I tested the Wikipedia proxy against club figures in the {{proxy.n_check|int}} countries where both exist and the language is mainly that country's.
+
+\section{Results}
+\subsection{Where breeds are born}
+Breed origins are highly concentrated (Figure~\ref{fig:origins}, Table~\ref{tab:origins}). Britain is the country of origin of {{origins.top.0.n|int}} breeds, France of {{origins.top.1.n|int}}, the United States of {{origins.top.2.n|int}}, Spain of {{origins.top.3.n|int}} and Germany of {{origins.top.4.n|int}}. In all, {{meta.n_origin_countries|int}} present-day countries are the origin of at least one breed, and Europe accounts for {{origins.europe_share|pct}} of the total. Spain's high count reflects many regional breeds recognised nationally but not by the FCI, and better Wikidata coverage of them; the counts measure documented breeds as much as breeding.
+
+{{TABLE_ORIGINS}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_origins_map.png}
+\caption{Number of breeds by present-day country of origin, {{meta.n_study|int}} breeds. Equal Earth projection; outlines from Natural Earth.}\label{fig:origins}
+\end{figure}
+
+Within Britain, the {{uk.n_points|int}} breeds that can be placed cluster in the north of England and the Scottish Borders and Highlands: terriers of the Lake District, Northumberland, Yorkshire and the Borders, and gundogs and herding dogs of Scottish estates and islands (Figure~\ref{fig:ukmap}).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.62\textwidth]{f_uk_map.png}
+\caption{Birthplaces of {{uk.n_points|int}} British breeds where English Wikipedia names a county, valley, town or estate. Markers from OS Open Names or county centroids; county boundaries from ONS.}\label{fig:ukmap}
+\end{figure}
+
+\subsection{Where breeds are loved}
+{{TABLE_CLUBS}}
+
+For {{clubs.n_top_abroad|int}} of the {{meta.n_clubs|int}} clubs, the most registered breed was born in another country (Table~\ref{tab:clubs}, Figure~\ref{fig:loved}). Only {{clubs.home_top_list|raw}} put a home-grown breed first. The Golden Retriever, bred at Guisachan in the Scottish Highlands, leads in France, Australia and, by the order given in the club's release, Norway; the Labrador leads in the United Kingdom, Sweden, Canada and Finland. In Japan the Poodle, a breed the FCI files under France, leads with {{clubs.top.JPN.count|int}} registrations, followed by the Chihuahua from Mexico. Of all top-ten places across the clubs, {{clubs.top10_abroad_share|pct}} go to breeds from another country (Figure~\ref{fig:top10}).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_loved_map.png}
+\caption{Each country's most popular breed, coloured by the breed's country of origin. Solid: kennel club figures. Hatched: Wikipedia pageview proxy in the country's main language.}\label{fig:loved}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_top10.png}
+\caption{The ten most registered breeds of each club, in order, coloured by country of origin. Outlined squares are home-grown. Some clubs publish fewer than ten.}\label{fig:top10}
+\end{figure}
+
+Where every breed is counted, the share of home-grown registrations ranges from {{clubs.home.GBR|pct}} in the United Kingdom and {{clubs.home.DEU|pct}} among VDH puppies in Germany to {{clubs.home.AUS|pct}} in Australia and {{clubs.home.JPN|pct}} in Japan (Figure~\ref{fig:home}). British breeds make up {{clubs.home_parts.AUS.GBR|pct}} of Australian registrations, and French, German and Mexican breeds together dominate in Japan.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_home.png}
+\caption{Registrations in 2025 by the breed's country of origin, clubs that count every breed. Outlined: home-grown. VDH figures are puppies bred by member clubs.}\label{fig:home}
+\end{figure}
+
+\subsection{The French Bulldog}
+The French Bulldog shows how fast a breed can travel and how fast it can fall. It is the American Kennel Club's number one for 2025, the Japan Kennel Club's number {{frenchie.jkc_rank|int}} with {{frenchie.jkc_count|int}} registrations, and the Royal Kennel Club's number {{frenchie.uk_rank_2025|int}}. In Britain it registered {{frenchie.uk_2018|int}} dogs in 2018 against {{frenchie.lab_2018|int}} Labradors, peaked at {{frenchie.uk_peak|int}} in {{frenchie.uk_peak_year|raw}}, and fell to {{frenchie.uk_2025|int}} in 2025, a drop of {{frenchie.uk_drop|pct}} (Figure~\ref{fig:uktrend}). VDH member clubs bred only {{frenchie.vdh_2025|int}} French Bulldog puppies in 2025, which says more about where French Bulldogs in Germany are bred than about how many there are.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_uk_trend.png}
+\caption{Royal Kennel Club registrations a year, 2016 to 2025, breeds in the top five in any year; varieties added together. Colours give the country of origin.}\label{fig:uktrend}
+\end{figure}
+
+\subsection{The Wikipedia proxy}
+{{TABLE_PROXY}}
+
+The proxy names the club's own number one in {{proxy.n_match|int}} of {{proxy.n_check|int}} test countries and a club top-three breed in {{proxy.n_in_top3|int}} (Table~\ref{tab:proxy}). The Cane Corso, an Italian breed, is the most read breed in {{proxy.cane_n|int}} of {{meta.n_langs|int}} editions, English included ({{proxy.en_top_views|int}} views in twelve months), and several editions read most about a breed from their own country: {{proxy.home_editions_text|raw}}. Editions are often led by breeds that are in the news or simply striking, and shared editions mix readers from many countries. I therefore show proxy countries hatched and treat them as a guide to curiosity.
+
+\subsection{Disagreements about origin}
+Of {{origins.n_compared|int}} breeds with both an FCI and a Wikidata origin, the two share no country for {{origins.n_disagree|int}}, and Wikidata lists additional countries for {{origins.n_extra|int}} more. Examples include the Pharaoh Hound (FCI: Malta; Wikidata: Egypt), the Siberian Husky (FCI: United States; Wikidata: Russia) and the Rhodesian Ridgeback (FCI: South Africa; Wikidata: Zimbabwe). The FCI also records countries of patronage, which take responsibility for a breed's standard when its country of origin does not, and countries of development: the Jack Russell Terrier is British by origin and Australian by development.
+
+\section{Discussion}
+The map of breed origins is mostly a map of where Victorian and Edwardian dog fancy took hold, and of who has since documented local breeds online. Britain's lead reflects the early formalisation of breeds by its Kennel Club and the many regional working terriers, gundogs and hounds that were written into stud books in the nineteenth century. The popularity map shows those breeds spread across the world: retrievers from British estates top the registers of France, Australia, Sweden, Canada and Finland. The countries that keep a home-grown dog first, Germany with the German Shepherd and Britain with the Labrador, are those with large breeding traditions of their own.
+
+At the same time, popularity is volatile. The French Bulldog's British registrations rose {{frenchie.rise|f1}} times between 2016 and {{frenchie.uk_peak_year|raw}} and then fell {{frenchie.fall|f1}} times by 2025, a pattern consistent with the fashion cycles described for American registrations \citep{herzog2004,ghirlanda2013}.
+
+\section{Limitations}
+Registrations count pedigree dogs registered with one body, which are a minority of all dogs and a different minority in each country. Clubs measure different things (registrations, litters, puppies bred) and publish different amounts: five clubs give full tables, the rest a ranking or a press release with the top few breeds, and Finland's figures are for 2024. The French figures are as reported in the press. Matching club names to breeds is imperfect, and adding varieties together changes some rankings. Origins are conventions: the FCI's country of origin is a statement about the breed standard, not about the ancestry of the dogs. Wikidata's coverage of breeds is uneven between countries. The pageview proxy measures reading, which follows news and novelty; candidate breeds were limited to the 200 with the most language editions, plus the Pomeranian; and shared language editions cannot be split by country.
+
+\section{Conclusion}
+Dog breeds are born in a few places and loved in many. With open data it is possible to map both, at least roughly: Britain, France, the United States, Spain and Germany are the origin of most documented breeds, and in {{clubs.n_top_abroad|int}} of {{meta.n_clubs|int}} countries with open club figures the favourite breed came from somewhere else. The interactive version lets readers explore every country's breeds and favourites.
+
+\section*{Data and code availability}
+Data and code: \url{https://github.com/Tristan-Hotham/dog-breeds}. Interactive version: \url{https://maps.tristanhotham.com/dog-breeds/}. Archived release: \url{https://doi.org/10.5281/zenodo.23748254}. Derived data are released under CC BY-SA 4.0 (because they include English Wikipedia material), code under MIT.
+
+\section*{AI statement}
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\begin{thebibliography}{99}\small
+\bibitem[AKC(2026)]{akc} American Kennel Club (2026) Meet the most popular dog breeds of 2025. \url{https://www.akc.org/expert-advice/news/most-popular-dog-breeds-2025/}
+\bibitem[Breizh-Info(2026)]{breizh} Breizh-Info (2026) Chiens de race : le golden retriever en tête des préférences en Bretagne comme en France, 26 January 2026, reporting Société Centrale Canine figures.
+\bibitem[CP(2026)]{cp} The Canadian Press (2026) Top dog: Labrador retriever continues dominance as Canada's most popular breed, 11 March 2026, reporting Canadian Kennel Club figures.
+\bibitem[Dogs Australia(2026)]{ankc} Dogs Australia (Australian National Kennel Council) (2026) National animal registration analysis 2018 to 2025. \url{https://www.dogsaustralia.org.au/media/10430/rego-stats-list_2018-2025.pdf}
+\bibitem[FCI(2026)]{fci} Fédération Cynologique Internationale (2026) FCI breeds nomenclature. \url{https://www.fci.be/en/nomenclature/}
+\bibitem[Ghirlanda et al.(2013)]{ghirlanda2013} Ghirlanda, S., Acerbi, A., Herzog, H. and Serpell, J.A. (2013) Fashion vs. function in cultural evolution: the case of dog breed popularity. PLoS ONE 8(9): e74770.
+\bibitem[Herzog et al.(2004)]{herzog2004} Herzog, H.A., Bentley, R.A. and Hahn, M.W. (2004) Random drift and large shifts in popularity of dog breeds. Proceedings of the Royal Society B (Supplement) 271.
+\bibitem[JKC(2026)]{jkc} Japan Kennel Club (2026) Registrations by breed, January to December 2025 (in Japanese). \url{https://www.jkc.or.jp/registr-statistics/2025/}
+\bibitem[NKK(2026)]{nkk} Norsk Kennel Klub (2026) Hunden holder stand: stabile registreringstall i 2025, press release, 15 January 2026.
+\bibitem[OS(2026)]{osnames} Ordnance Survey (2026) OS Open Names. Open Government Licence v3.0.
+\bibitem[Parker et al.(2004)]{parker2004} Parker, H.G., Kim, L.V., Sutter, N.B. et al. (2004) Genetic structure of the purebred domestic dog. Science 304.
+\bibitem[Parker et al.(2017)]{parker2017} Parker, H.G., Dreger, D.L., Rimbault, M. et al. (2017) Genomic analyses reveal the influence of geographic origin, migration, and hybridization on modern dog breed development. Cell Reports 19.
+\bibitem[RKC(2026)]{rkc} The Royal Kennel Club (2026) Breed registration statistics: 10-yearly breed statistics. \url{https://www.royalkennelclub.com/about-us/resources/breed-registration-statistics/}
+\bibitem[SKK(2026)]{skk} Svenska Kennelklubben (2026) SKK: ökad marknadsandel 2025 när valpköparna valde rashund, press release, 13 January 2026.
+\bibitem[Verkkouutiset(2025)]{verkko} Verkkouutiset (2025) Nämä ovat suosituimmat koirarodut, 3 January 2025, reporting Suomen Kennelliitto figures for 2024.
+\bibitem[VDH(2026)]{vdh} Verband für das Deutsche Hundewesen (2026) Welpenstatistik. \url{https://www.vdh.de/presse/welpenstatistik/}
+\bibitem[Vrandečić and Krötzsch(2014)]{wikidata} Vrandečić, D. and Krötzsch, M. (2014) Wikidata: a free collaborative knowledgebase. Communications of the ACM 57(10).
+\bibitem[Wikimedia(2026)]{pageviews} Wikimedia Foundation (2026) Pageviews API and PageViewInfo. \url{https://wikimedia.org/api/rest_v1/}
+\end{thebibliography}
+\end{document}
